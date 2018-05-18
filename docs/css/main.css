@@ -51,7 +51,7 @@ table {
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 25px;
-  font-size: 12px;
+  font-size: 0.75em;
   padding-bottom: 15px;
 }
 
@@ -83,12 +83,11 @@ table {
   justify-content: space-between;
   flex-direction: row;
   padding-top: 15px;
-  padding-bottom: 18px;
+  padding-bottom: 12px;
 }
 
 .page-header .header-info {
   overflow-wrap: break-word;
-  font-size: 14px;
   text-align: right;
 }
 
@@ -97,7 +96,8 @@ table {
 }
 
 .page-header .header-info .header-contacts {
-  margin-top: 15px;
+  font-size: 0.875em;
+  margin-top: 12px;
   margin-bottom: 15px;
 }
 
@@ -106,7 +106,7 @@ table {
 }
 
 .page-header .logo {
-  width: 40.5319149%;
+  width: 381;
   min-width: 300px;
   height: auto;
 }
@@ -116,7 +116,7 @@ table {
   height: auto;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
   .page-header {
     flex-direction: column;
     justify-content: center;
@@ -138,11 +138,19 @@ table {
 .header-menu {
   display: flex;
   justify-content: space-between;
+  padding-top: 5px;
+}
+
+@media (max-width: 670px) {
+  .header-menu {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 body {
   font-family: "PT Serif", serif;
-  font-size: 16px;
+  font-size: 1em;
   margin: 0 auto;
   width: 100%;
   background: white;
@@ -170,22 +178,25 @@ main {
 
 .sub-text {
   color: #989898;
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
 .navigation li {
   display: inline-block;
   margin-left: 20px;
   color: #212121;
+  border-bottom: 2px solid #e8e8e8;
+  color: #989898;
+  transition: 0.5s border-bottom;
+}
+
+.navigation li:hover {
+  border-bottom: 2px solid #bb2721;
+  cursor: pointer;
 }
 
 .navigation li a {
   color: #212121;
-  border-bottom: 2px solid #e8e8e8;
-}
-
-.navigation li a:hover {
-  border-bottom: 2px solid #bb2721;
 }
 
 .navigation li:first-child {
@@ -200,8 +211,8 @@ main {
 .socials li {
   display: inline-block;
   color: #989898;
-  font-size: 16px;
-  margin-right: 12px;
+  font-size: 1.125em;
+  margin-right: 10px;
 }
 
 .socials li a {

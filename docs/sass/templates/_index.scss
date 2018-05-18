@@ -1,10 +1,6 @@
-* {
-    //transition: 1s;
-}
-
 body {
 	font-family: $PT;
-	font-size: 16px;
+	font-size: 1em; //16 / 16
 	margin: 0 auto;
 	width: 100%;
 	background: white;
@@ -33,5 +29,5 @@ main {
 
 .sub-text {
 	color: $soc-color;
-	font-size: 12px;
+	font-size: 0.75em; //12 / 16
 }
