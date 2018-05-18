@@ -77,7 +77,6 @@ body {
 }
 
 .wrapper {
-  margin: 0 auto;
-  max-width: 960px;
-  width: 75%;
+  padding-left: 13.28125%;
+  padding-right: 13.28125%;
 }
