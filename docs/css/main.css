@@ -64,6 +64,11 @@ table {
   padding-bottom: 18px;
 }
 
+.logo img {
+  width: 40.5319149%;
+  height: auto;
+}
+
 body {
   font-family: "PT Serif", serif;
   font-size: 16px;
