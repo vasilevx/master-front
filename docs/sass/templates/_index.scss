@@ -1,21 +1,37 @@
+* {
+    //transition: 1s;
+}
+
 body {
 	font-family: $PT;
 	font-size: 16px;
-	
-}
-
-.full-wrapper {
 	margin: 0 auto;
-	max-width: 1280px;
 	width: 100%;
 	background: white;
-
+	color: $grey-text;
+	line-height: 1.5;
 }
 
 .wrapper {
-	
-	padding-left: 13.28125%;
-	padding-right: 13.28125%;
+	box-sizing: content-box;
+	max-width: 940px;
+	margin: 0 auto;
+	padding-right: 2%;
+	padding-left: 2%;
 
+}
 
+main {
+	padding-top: 40px;
+}
+
+.red-Line {
+	width: 100%;
+	margin-top: 100px;
+	border-top: 1px solid $eng-red;
+}
+
+.sub-text {
+	color: $soc-color;
+	font-size: 12px;
 }

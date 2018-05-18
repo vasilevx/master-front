@@ -1,0 +1,27 @@
+.page-footer {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 25px;
+	font-size: 12px;
+	padding-bottom: 15px;
+	.navigation {
+		font-size: 14px;
+		margin-bottom: 50px;
+	}
+	.adress {
+		font-style: italic;
+	}
+
+	.footer-fond {
+		width: 31.9148936%;
+		max-width: 300px;
+
+	}
+	.socials {
+		margin-left: 30px;
+	}
+}
+

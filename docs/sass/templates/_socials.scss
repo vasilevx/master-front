@@ -1,0 +1,13 @@
+.socials {
+	display: inline-block;
+	min-width: 60px;
+	li {
+		display: inline-block;
+		color: $soc-color;
+		font-size: 16px;
+		margin-right: 12px;
+		a {
+			color: $soc-color;
+		}
+	}
+}
