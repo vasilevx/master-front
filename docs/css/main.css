@@ -44,6 +44,34 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "PT Serif";
+  src: url("../../fonts/PT_Serif-Web-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url("../../fonts/PT_Serif-Web-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url("../../fonts/PT_Serif-Web-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "PT Serif";
+  src: url("../../fonts/PT_Serif-Web-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+
 .page-footer {
   display: -webkit-flex;
   display: flex;
@@ -220,12 +248,21 @@ main {
   line-height: 1;
 }
 
+.navigation li:first-child {
+  padding-left: 0;
+}
+
+.navigation li:last-child {
+  padding-right: 0;
+}
+
 .navigation li:hover {
   cursor: pointer;
 }
 
 .navigation li a {
   color: #212121;
+  transition: 0.5s border-bottom;
   border-bottom: 2px solid #e8e8e8;
 }
 
@@ -255,4 +292,9 @@ main {
 
 .socials li a:hover {
   color: #bb2721;
+}
+
+.ya-map {
+  max-width: 940px;
+  width: 100%;
 }
