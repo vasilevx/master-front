@@ -9,6 +9,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -46,6 +47,21 @@ table {
 .navigation li {
   display: inline-block;
   margin-left: 20px;
+  border-bottom: 2px solid #e8e8e8;
+  color: #212121;
+}
+
+.navigation li a {
+  color: #212121;
+}
+
+.header-menu {
+  border-top: 1px solid #e8e8e8;
+}
+
+.logo-info {
+  padding-top: 15px;
+  padding-bottom: 18px;
 }
 
 body {
@@ -55,11 +71,13 @@ body {
 
 .full-wrapper {
   margin: 0 auto;
-  width: 1280px;
+  max-width: 1280px;
+  width: 100%;
   background: white;
 }
 
 .wrapper {
   margin: 0 auto;
-  width: 960px;
+  max-width: 960px;
+  width: 75%;
 }

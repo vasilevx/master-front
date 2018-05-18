@@ -1,5 +1,19 @@
 .navigation li {
 	display: inline-block;
 	margin-left: 20px;
+	border-bottom: 2px solid $grey-light;
+	color: $grey-text;
+		a {
+			color: $grey-text;
+		}
 	
+}
+
+.header-menu {
+	border-top: 1px solid $grey-light;
+}
+
+.logo-info {
+	padding-top: 15px;
+	padding-bottom: 18px;
 }

@@ -1,17 +1,21 @@
 body {
 	font-family: $PT;
 	font-size: 16px;
+	
 }
 
 .full-wrapper {
 	margin: 0 auto;
-	width: 1280px;
+	max-width: 1280px;
+	width: 100%;
 	background: white;
 }
 
 .wrapper {
 	margin: 0 auto;
-	width: 960px;
-
+	max-width: 960px;
+	width: 75%;
 }
+
+
 
