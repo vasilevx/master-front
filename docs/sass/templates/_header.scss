@@ -4,6 +4,7 @@
 }
 
 .page-header {
+	display: -webkit-flex;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
@@ -59,14 +60,16 @@
 }
 
 .header-menu {
+	
+	display: -webkit-flex;
 	display: flex;
+	align-items: flex-end;
 	justify-content: space-between;
-	padding-top: 5px;
-	@media (max-width: 670px) {
+	
+	@media (max-width: 690px) {
 		flex-direction: column;
-		
-			text-align: center;
-		
+		align-items: center;
+		text-align: center;
 	}
 }
 

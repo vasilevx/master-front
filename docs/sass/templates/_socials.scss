@@ -8,6 +8,9 @@
 		margin-right: 10px;
 		a {
 			color: $soc-color;
+			&:hover {
+				color: $eng-red;
+			}
 		}
 	}
 }

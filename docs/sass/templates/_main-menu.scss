@@ -1,16 +1,28 @@
+.navigation {
+
+}
+
 .navigation li {
+  text-align: center;
   display: inline-block;
-  margin-left: 20px;
+  padding: 10px;
   color: $grey-text;
-  border-bottom: 2px solid $grey-light;
+  
   color: $soc-color;
   transition: 0.5s border-bottom;
+  line-height: 1;
+
+
   &:hover {
-      border-bottom: 2px solid $eng-red;
+      
       cursor: pointer;
     }
   a {
     color: $grey-text;
+    border-bottom: 2px solid $grey-light;
+    &:hover {
+      border-bottom: 2px solid $eng-red;
+    }
   }
   &:first-child {
     margin-left: 0;

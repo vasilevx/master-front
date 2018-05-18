@@ -16,12 +16,39 @@
 	}
 
 	.footer-fond {
+		text-align: left;
 		width: 31.9148936%;
 		max-width: 300px;
 
 	}
 	.socials {
 		margin-left: 30px;
+	}
+
+	.copyright {
+		text-align: center;
+	}
+
+	@media (max-width: 765px) {
+
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		.footer-fond {
+			width: 100%;
+			max-width: 100%;
+			text-align: center;
+		}
+
+		.navigation {
+			font-size: 14px;
+			margin-bottom: 0px;
+			text-align: center;
+		}
+
+		.copyright {
+			width: 100%;
+		}
 	}
 }
 
