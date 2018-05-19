@@ -17,9 +17,27 @@ body {
 
 }
 
-main {
-	padding-top: 40px;
+a {
+	color: $grey-text; 
+	transition: 0.5s color;
+	cursor: pointer;
+	&:hover {
+		color: $eng-red;
+	}
 }
+
+li a {
+	cursor: pointer;
+}
+
+
+  .underline-grey a {
+  	transition: 0.5s border-bottom;
+    border-bottom: 2px solid $grey-light;
+    &:hover {
+      border-bottom: 2px solid $eng-red;
+    }
+  }
 
 .red-Line {
 	width: 100%;
@@ -30,4 +48,20 @@ main {
 .sub-text {
 	color: $soc-color;
 	font-size: 0.75em; //12 / 16
+}
+
+.text12 {
+	font-size: 0.75em;
+}
+
+.text14 {
+	font-size: 0.875em;
+}
+
+.text72 {	
+	font-size: 4.5em; //72 / 16
+}
+
+.text24 {
+	font-size: 1.5em;
 }

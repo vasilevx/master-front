@@ -10,6 +10,14 @@
   color: $soc-color;
   transition: 0.5s border-bottom;
   line-height: 1;
+  a {
+    transition: 0.5s border-bottom;
+    border-bottom: 2px solid $grey-light;
+    &:hover {
+      border-bottom: 2px solid $eng-red;
+    }
+  }
+
   &:first-child {
     padding-left: 0;
   }
@@ -19,14 +27,6 @@
   &:hover {
       cursor: pointer;
     }
-  a {
-    color: $grey-text;
-    transition: 0.5s border-bottom;
-    border-bottom: 2px solid $grey-light;
-    &:hover {
-      border-bottom: 2px solid $eng-red;
-    }
-  }
   &:first-child {
     margin-left: 0;
   }

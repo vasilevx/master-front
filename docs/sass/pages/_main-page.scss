@@ -1,0 +1,116 @@
+.announcement {
+	display: flex;
+	justify-context: space-between;
+	flex-direction: row;
+	margin-bottom: 80px;
+	
+
+	.announcement-image {
+		width: 50%;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	
+	.announcement-description {
+		width: 50%;
+		margin-left: 2%;
+		.title {
+			line-height: 1;
+			font-size: 1.5em; //24 / 16
+			margin-bottom: 25px;
+			
+		}
+		.desc {
+			text-align: left;
+		}
+
+		.place-time {
+			font-style: italic;
+		}
+	}
+
+	@media (max-width: 765px) {
+		flex-direction: column;
+		.announcement-image {
+			width: 100%;
+		}
+		.announcement-description {
+			width: 100%;
+		}
+	}
+
+}
+
+.news-afisha {
+	color: $grey-text;
+	display: flex;
+	justify-content: space-between;
+
+	.news {
+		max-width: 450px;
+		.news-title {
+		padding: 10px 0;
+		}
+	}
+
+	.afisha {
+		h1 {
+			margin-left: 65px;
+		}
+
+		.afisha-list {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+	
+		}
+
+		.afisha-item {
+			display: flex;
+			justify-content: space-between;
+			max-width: 334px;
+			padding: 10px 0;
+			text-align: left;
+		}
+		.afisha-title {
+			font-size: 0.875em;
+			font-weight: bold;
+		}
+		.afisha-description {
+			font-size: 0.875em;
+			color: $grey-text;
+		}
+		.afisha-date {
+			font-style: italic;
+			color: $soc-color;
+		}
+
+		.afisha-img {
+			margin-right: 5px;
+
+		}
+	}
+
+	@media (max-width: 600px) {
+		flex-direction: column;
+		.news {
+			max-width: 100%;
+			text-align: center;
+		}
+			
+		.afisha {
+			margin-top: 20px;
+			h1 {
+				margin: 0;
+				text-align: center;
+			}
+			.afisha-list {
+				width: 100%;
+				align-items: center;
+			}
+		}
+	}
+
+}
