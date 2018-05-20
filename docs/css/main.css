@@ -45,31 +45,32 @@ table {
 }
 
 @font-face {
-  font-family: "PT Serif";
-  src: url("../../fonts/PT_Serif-Web-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
+  font-family: 'PT Serif';
+  src: url("../fonts/ptf55f_w.eot");
+  src: local("PT Serif"), url("../fonts/ptf55f_w.eot?#iefix") format("embedded-opentype"), url("../fonts/ptf55f_w.woff") format("woff"), url("../fonts/ptf55f_w.ttf") format("truetype"), url("../fonts/ptf55f_w.svg#PTSerif-Regular") format("svg");
 }
 
 @font-face {
-  font-family: "PT Serif";
-  src: url("../../fonts/PT_Serif-Web-Italic.ttf") format("truetype");
+  font-family: 'PT Serif';
   font-style: italic;
-  font-weight: normal;
+  src: url("../fonts/ptf56f_w.eot");
+  src: local("PT Serif Italic"), url("../fonts/ptf56f_w.eot?#iefix") format("embedded-opentype"), url("../fonts/ptf56f_w.woff") format("woff"), url("../fonts/ptf56f_w.ttf") format("truetype"), url("../fonts/ptf56f_w.svg#PTSerif-Italic") format("svg");
 }
 
 @font-face {
-  font-family: "PT Serif";
-  src: url("../../fonts/PT_Serif-Web-Bold.ttf") format("truetype");
+  font-family: 'PT Serif';
+  src: url("../fonts/ptf75f_w.eot");
   font-style: normal;
   font-weight: bold;
+  src: local("PT Serif Bold"), url("../fonts/ptf75f_w.eot?#iefix") format("embedded-opentype"), url("../fonts/ptf75f_w.woff") format("woff"), url("../fonts/ptf75f_w.ttf") format("truetype"), url("../fonts/ptf75f_w.svg#PTSerif-Bold") format("svg");
 }
 
 @font-face {
-  font-family: "PT Serif";
-  src: url("../../fonts/PT_Serif-Web-BoldItalic.ttf") format("truetype");
+  font-family: 'PT Serif';
   font-style: italic;
   font-weight: bold;
+  src: url("../fonts/ptf76f_w.eot");
+  src: local("PT Serif Bold Italic"), url("../fonts/ptf76f_w.eot?#iefix") format("embedded-opentype"), url("../fonts/ptf76f_w.woff") format("woff"), url("../fonts/ptf76f_w.ttf") format("truetype"), url("../fonts/ptf76f_w.svg#PTSerif-BoldItalic") format("svg");
 }
 
 .page-footer {
@@ -200,7 +201,7 @@ table {
 .header-menu {
   display: -webkit-flex;
   display: flex;
-  width: 100%;
+  max-width: 940px;
   align-items: flex-end;
   justify-content: space-between;
 }
