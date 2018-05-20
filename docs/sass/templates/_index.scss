@@ -19,7 +19,7 @@ body {
 
 a {
 	color: $grey-text; 
-	transition: 0.5s color;
+	transition: 0.5s all;
 	cursor: pointer;
 	&:hover {
 		color: $eng-red;
@@ -31,13 +31,13 @@ li a {
 }
 
 
-  .underline-grey a {
-  	transition: 0.5s border-bottom;
-    border-bottom: 2px solid $grey-light;
-    &:hover {
-      border-bottom: 2px solid $eng-red;
-    }
-  }
+.underline-grey a {
+	border-bottom: 1px solid $grey-light;
+	transition: 0.5s all;
+	&:hover {
+	  border-bottom: 1px solid $eng-red;
+	}
+ }
 
 .red-Line {
 	width: 100%;

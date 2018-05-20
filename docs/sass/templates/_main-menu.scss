@@ -7,17 +7,9 @@
   display: inline-block;
   padding: 10px;
   color: $grey-text;
-  color: $soc-color;
-  transition: 0.5s border-bottom;
   line-height: 1;
-  a {
-    transition: 0.5s border-bottom;
-    border-bottom: 2px solid $grey-light;
-    &:hover {
-      border-bottom: 2px solid $eng-red;
-    }
-  }
 
+  @extend .underline-grey;
   &:first-child {
     padding-left: 0;
   }
