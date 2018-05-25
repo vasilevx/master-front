@@ -1,9 +1,8 @@
 .announcement {
-	display: -webkit-flex;
 	display: flex;
 	justify-context: space-between;
 	flex-direction: row;
-	margin-bottom: 80px;
+	margin-bottom: 40px;
 	
 
 	.announcement-image {
@@ -19,7 +18,7 @@
 		margin-left: 2%;
 		.title {
 			line-height: 1.5;
-			font-size: 1.5em; //24 / 16
+			font-size: $text24; //24 / 16
 			margin-bottom: 10px;
 			
 		}
@@ -50,58 +49,64 @@
 
 .news-afisha {
 	color: $grey-text;
-	display: -webkit-flex;
 	display: flex;
 	justify-content: space-between;
-
+	section > h2 {
+		font-size: $text24;
+	}
 	.news {
 		max-width: 450px;
 		.news-title {
-		padding: 10px 0;
+			padding: 10px 0;
 		}
 	}
 
 	.afisha {
-		h1 {
+		& > h2 {
 			margin-left: 65px;
 		}
 
 
 		.afisha-list {
-			display: -webkit-flex;
 			display: flex;
 			justify-content: space-between;
 			flex-direction: column;
-			& > a {
-				border: none;
-			}
-	
 		}
 
 		.afisha-item {
-			display: -webkit-flex;
 			display: flex;
 			justify-content: space-between;
 			max-width: 334px;
 			padding: 10px 0;
 			text-align: left;
-		}
-		.afisha-title {
-			font-size: 0.875em;
-			font-weight: bold;
-		}
-		.afisha-description {
-			font-size: 0.875em;
-			color: $grey-text;
-		}
-		.afisha-date {
-			font-style: italic;
-			color: $soc-color;
-		}
 
-		.afisha-img {
-			margin-right: 5px;
+			.afisha-about {
+				width: 80%;
+				.afisha-title {
+					font-size: $text14;
+					font-weight: bold;
+				}
+				.afisha-description {
+					font-size: $text14;
+					color: $grey-text;
 
+				}
+				.afisha-date {
+					@extend .sub-text;
+					font-style: italic;
+				}
+				.afisha-place {
+					@extend .sub-text;
+				}
+			}
+			.afisha-img {
+				flex-basis: 20%;
+				img {
+					width: 100%;
+					height: auto;
+				}
+				margin-right: 5px;
+			}
 		}
 	}
 
@@ -111,7 +116,7 @@
 			max-width: 100%;
 			text-align: center;
 		}
-			
+
 		.afisha {
 			margin-top: 20px;
 			h1 {
@@ -119,6 +124,9 @@
 				text-align: center;
 			}
 			.afisha-list {
+				word-wrap: break-word;
+				word-break: break-all;
+				overflow-wrap: break-word;
 				width: 100%;
 				align-items: center;
 			}

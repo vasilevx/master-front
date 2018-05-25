@@ -79,13 +79,13 @@ table {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-top: 25px;
   font-size: 0.75em;
   padding-bottom: 15px;
@@ -118,13 +118,13 @@ table {
   .page-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .page-footer .footer-fond {
     width: 100%;
@@ -132,7 +132,7 @@ table {
     text-align: center;
   }
   .page-footer .navigation {
-    font-size: 1em;
+    font-size: 14px;
     margin-bottom: 0px;
     text-align: center;
   }
@@ -151,12 +151,12 @@ table {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   padding-top: 15px;
   padding-bottom: 12px;
 }
@@ -168,7 +168,7 @@ table {
   text-align: right;
 }
 
-.page-header .header-info .sub-text, .page-header .header-info .news-afisha .afisha .afisha-item .afisha-about .afisha-date, .news-afisha .afisha .afisha-item .afisha-about .page-header .header-info .afisha-date, .page-header .header-info .news-afisha .afisha .afisha-item .afisha-about .afisha-place, .news-afisha .afisha .afisha-item .afisha-about .page-header .header-info .afisha-place {
+.page-header .header-info .sub-text {
   max-width: 300px;
 }
 
@@ -195,13 +195,13 @@ table {
   .page-header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
   }
   .page-header .logo {
     padding-top: 0;
@@ -218,7 +218,7 @@ table {
     margin-left: 0px;
     min-width: 0;
   }
-  .page-header .header-info .sub-text, .page-header .header-info .news-afisha .afisha .afisha-item .afisha-about .afisha-date, .news-afisha .afisha .afisha-item .afisha-about .page-header .header-info .afisha-date, .page-header .header-info .news-afisha .afisha .afisha-item .afisha-about .afisha-place, .news-afisha .afisha .afisha-item .afisha-about .page-header .header-info .afisha-place {
+  .page-header .header-info .sub-text {
     max-width: 100%;
   }
 }
@@ -229,22 +229,22 @@ table {
   display: flex;
   max-width: 940px;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media (max-width: 690px) {
   .header-menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     text-align: center;
   }
 }
@@ -261,7 +261,7 @@ body {
 
 .wrapper {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   max-width: 940px;
   margin: 0 auto;
   padding-right: 2%;
@@ -299,10 +299,11 @@ li a {
 
 .red-Line {
   width: 100%;
+  margin-top: 100px;
   border-top: 1px solid #bb2721;
 }
 
-.sub-text, .news-afisha .afisha .afisha-item .afisha-about .afisha-date, .news-afisha .afisha .afisha-item .afisha-about .afisha-place {
+.sub-text {
   color: #989898;
   font-size: 0.75em;
 }
@@ -363,7 +364,7 @@ li a {
 }
 
 .page-content {
-  margin: 40px 0;
+  margin-top: 80px;
 }
 
 .announcement {
@@ -373,9 +374,9 @@ li a {
   justify-context: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-bottom: 40px;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin-bottom: 80px;
 }
 
 .announcement .announcement-image {
@@ -410,8 +411,8 @@ li a {
   .announcement {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .announcement .announcement-image {
     width: 100%;
@@ -431,12 +432,8 @@ li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.news-afisha section > h2 {
-  font-size: 1.5em;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .news-afisha .news {
@@ -447,7 +444,7 @@ li a {
   padding: 10px 0;
 }
 
-.news-afisha .afisha > h2 {
+.news-afisha .afisha h1 {
   margin-left: 65px;
 }
 
@@ -456,28 +453,31 @@ li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.news-afisha .afisha .afisha-list > a {
+  border: none;
 }
 
 .news-afisha .afisha .afisha-item {
+  
   display: -webkit-box;
+  
   display: -ms-flexbox;
+  
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   max-width: 334px;
   padding: 10px 0;
   text-align: left;
-}
-
-.news-afisha .afisha .afisha-item .afisha-about {
-  width: 80%;
 }
 
 .news-afisha .afisha .afisha-item .afisha-about .afisha-title {
@@ -492,25 +492,19 @@ li a {
 
 .news-afisha .afisha .afisha-item .afisha-about .afisha-date {
   font-style: italic;
+  color: #989898;
 }
 
 .news-afisha .afisha .afisha-item .afisha-img {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
   margin-right: 5px;
-}
-
-.news-afisha .afisha .afisha-item .afisha-img img {
-  width: 100%;
-  height: auto;
 }
 
 @media (max-width: 600px) {
   .news-afisha {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
   .news-afisha .news {
     max-width: 100%;
@@ -529,8 +523,8 @@ li a {
     overflow-wrap: break-word;
     width: 100%;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 

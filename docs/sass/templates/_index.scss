@@ -1,6 +1,6 @@
 body {
 	font-family: $PT;
-	font-size: 1em; //16 / 16
+	font-size: $text16; //16 / 16
 	margin: 0 auto;
 	width: 100%;
 	background: white;
@@ -17,13 +17,18 @@ body {
 
 }
 
-a {
+.link-red {
 	color: $grey-text; 
-	transition: 0.5s all;
+	transition: .33s all;
 	cursor: pointer;
 	&:hover {
+		transition: none;
 		color: $eng-red;
 	}
+}
+
+a {
+	@extend .link-red;
 }
 
 li a {
@@ -33,21 +38,21 @@ li a {
 
 .underline-grey a {
 	border-bottom: 1px solid $grey-light;
-	transition: 0.5s all;
+	transition: .33s all;
 	&:hover {
-	  border-bottom: 1px solid $eng-red;
+		transition: none;
+		border-bottom: 1px solid $eng-red;
 	}
- }
+}
 
 .red-Line {
 	width: 100%;
-	margin-top: 100px;
 	border-top: 1px solid $eng-red;
 }
 
 .sub-text {
 	color: $soc-color;
-	font-size: 0.75em; //12 / 16
+	font-size: $text12; //12 / 16
 }
 
 .text12 {

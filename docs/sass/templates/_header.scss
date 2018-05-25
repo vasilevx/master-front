@@ -5,7 +5,6 @@
 
 
 .page-header {
-	display: -webkit-flex;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
@@ -20,7 +19,7 @@
 			max-width: 300px;
 		}
 		.header-contacts {
-			font-size: 0.875em; //14 / 16
+			font-size: $text14; //14 / 16
 			margin-top: 12px;
 			margin-bottom: 15px;
 			.phone {
@@ -69,13 +68,10 @@
 }
 
 .header-menu {	
-	display: -webkit-flex;
 	display: flex;
-	//width: 100%;
 	max-width: 940px;
 	align-items: flex-end;
 	justify-content: space-between;
-	
 	@media (max-width: 690px) {
 		flex-direction: column;
 		align-items: center;
