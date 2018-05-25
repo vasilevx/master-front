@@ -117,18 +117,24 @@
 			text-align: center;
 		}
 
+
 		.afisha {
 			margin-top: 20px;
-			h1 {
+			& > h2 {
 				margin: 0;
 				text-align: center;
 			}
 			.afisha-list {
-				word-wrap: break-word;
-				word-break: break-all;
-				overflow-wrap: break-word;
 				width: 100%;
-				align-items: center;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+				align-items: stretch;
+				.afisha-item {
+					margin: 0 auto;
+					width: 100%;
+					max-width: 100%;
+					
+				}
 			}
 		}
 	}

@@ -518,18 +518,22 @@ li a {
   .news-afisha .afisha {
     margin-top: 20px;
   }
-  .news-afisha .afisha h1 {
+  .news-afisha .afisha > h2 {
     margin: 0;
     text-align: center;
   }
   .news-afisha .afisha .afisha-list {
-    word-wrap: break-word;
-    word-break: break-all;
-    overflow-wrap: break-word;
     width: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .news-afisha .afisha .afisha-list .afisha-item {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
   }
 }
 
