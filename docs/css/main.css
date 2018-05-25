@@ -495,8 +495,7 @@ li a {
 }
 
 .news-afisha .afisha .afisha-item .afisha-img {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  width: 20%;
   margin-right: 5px;
 }
 
