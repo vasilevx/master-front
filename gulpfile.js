@@ -6,7 +6,7 @@ var gulp = require('gulp');
 gulp.task('sass', function() {
 	return gulp.src(['docs/sass/**/*.scss', 'docs/sass/**/*.sass'])
 	.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-	.pipe(prefix('last 2 versions'))
+	.pipe(prefix('last 10 versions'))
 	.pipe(gulp.dest('docs/css'))
 	.pipe(browserSync.reload({stream: true}))
 });

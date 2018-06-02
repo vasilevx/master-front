@@ -75,15 +75,19 @@ table {
 
 .page-footer {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 25px;
@@ -121,11 +125,14 @@ table {
   .page-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     -webkit-box-align: center;
+    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
   }
@@ -151,13 +158,16 @@ table {
 
 .page-header {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   padding-top: 15px;
@@ -190,7 +200,8 @@ table {
   width: 66%;
   padding-top: 16%;
   background: url("../img/logo.png") top left no-repeat;
-  background-size: 100% auto;
+  -webkit-background-size: 100% auto;
+          background-size: 100% auto;
   background-image: url("../img/logo.svg");
 }
 
@@ -198,13 +209,16 @@ table {
   .page-header {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-pack: center;
+    -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
   }
   .page-header .logo {
     padding-top: 0;
@@ -213,7 +227,8 @@ table {
     width: 60%;
     padding-top: 16%;
     background: url("../img/logo-vertical.png") top center no-repeat;
-    background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+            background-size: 100% auto;
     background-image: url("../img/logo-vertical.svg");
   }
   .page-header .header-info {
@@ -228,15 +243,19 @@ table {
 
 .header-menu {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
+  -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+          align-content: stretch;
   max-width: 940px;
   -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -246,9 +265,11 @@ table {
     padding-top: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: center;
+    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
     text-align: center;
@@ -277,12 +298,14 @@ body {
 .link-red, a, .navigation li .fal {
   color: #212121;
   -webkit-transition: .33s all;
+  -o-transition: .33s all;
   transition: .33s all;
   cursor: pointer;
 }
 
 .link-red:hover, a:hover, .navigation li .fal:hover {
   -webkit-transition: none;
+  -o-transition: none;
   transition: none;
   color: #bb2721;
 }
@@ -294,11 +317,13 @@ li a {
 .underline-grey a {
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
   -webkit-transition: .33s all;
+  -o-transition: .33s all;
   transition: .33s all;
 }
 
 .underline-grey a:hover {
   -webkit-transition: none;
+  -o-transition: none;
   transition: none;
   border-bottom: 1px solid #bb2721;
 }
@@ -378,11 +403,13 @@ li a {
 
 .announcement {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   justify-context: space-between;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   margin-bottom: 40px;
@@ -420,6 +447,7 @@ li a {
   .announcement {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -438,9 +466,11 @@ li a {
 .news-afisha {
   color: #212121;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
@@ -463,22 +493,27 @@ li a {
 
 .news-afisha .afisha .afisha-list {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
 .news-afisha .afisha .afisha-item {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 334px;
@@ -518,6 +553,7 @@ li a {
   .news-afisha {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
   }
@@ -537,6 +573,7 @@ li a {
     word-wrap: break-word;
     overflow-wrap: break-word;
     -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
   }
