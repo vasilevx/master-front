@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -142,6 +143,7 @@ table {
     text-align: center;
   }
   .page-footer .navigation {
+    width: 100%;
     font-size: 1em;
     margin-bottom: 0px;
     text-align: center;
@@ -235,6 +237,7 @@ table {
     text-align: center;
     margin-left: 0px;
     min-width: 0;
+    width: 100%;
   }
   .page-header .header-info .sub-text, .page-header .header-info .news-afisha .afisha .afisha-item .afisha-about .afisha-date, .news-afisha .afisha .afisha-item .afisha-about .page-header .header-info .afisha-date, .page-header .header-info .news-afisha .afisha .afisha-item .afisha-about .afisha-place, .news-afisha .afisha .afisha-item .afisha-about .page-header .header-info .afisha-place {
     max-width: 100%;
@@ -268,10 +271,6 @@ table {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
     text-align: center;
   }
 }
@@ -329,6 +328,7 @@ li a {
 }
 
 .red-Line {
+  margin-top: 20px;
   width: 100%;
   border-top: 1px solid #bb2721;
 }
@@ -582,6 +582,116 @@ li a {
     width: 100%;
     max-width: 100%;
   }
+}
+
+.letter-spacing-300 {
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin: 60px 0 15px 0;
+  font-size: 1.5em;
+}
+
+.gallery {
+  text-align: center;
+}
+
+.gallery p {
+  display: inline-block;
+  max-width: 600px;
+  text-align: center;
+}
+
+.gallery .gal-formats {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.gallery .gal-formats li {
+  padding: 0 10px;
+}
+
+.gallery .gal-formats li a {
+  color: #bb2721;
+}
+
+.gallery .responsive-box {
+  margin: 20px 0;
+  position: relative;
+  width: 100%;
+  /* Произвольная ширина, которая требуется для блока */
+}
+
+.gallery .responsive-box::before {
+  content: "";
+  display: block;
+  padding-top: 89%;
+  /* С помощью этого padding мы задаем высоту равную ширине блока */
+}
+
+.gallery .gal-imgs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.gallery .gal-imgs img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.gallery .gal-imgs .gal-img {
+  display: block;
+  width: 33%;
+  height: 25%;
+  float: left;
+}
+
+.gallery .gal-imgs .gal-img2x2 {
+  width: 66%;
+  height: 49.99%;
+}
+
+.gallery .gal-imgs .gal-master {
+  font-style: italic;
+  text-align: center;
+  font-size: 0.875em;
+  line-height: 1;
+}
+
+.gallery .gal-imgs .gal-master img {
+  width: 60%;
+  margin: 20px 0 1px 0;
+  height: auto;
+}
+
+.gallery .gal-imgs .gal-master p {
+  text-decoration: underline;
+}
+
+.gallery .gal-imgs:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.fond-big {
+  display: block;
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+  margin: 0 auto;
 }
 
 .ya-map {
