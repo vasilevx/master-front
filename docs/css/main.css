@@ -648,7 +648,6 @@ li a {
 .gallery .gal-imgs img {
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
 
 .gallery .gal-imgs .gal-img {
@@ -804,13 +803,12 @@ li a {
 
 .tar-princ {
   margin-top: 40px;
+  text-align: center;
 }
 
-.tar-princ i {
-  display: block;
+.tar-princ a {
   text-decoration: underline;
   font-style: italic;
-  text-align: center;
 }
 
 .tar-princ h2 {
@@ -821,6 +819,7 @@ li a {
 }
 
 .tar-princ .target {
+  text-align: left;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -846,6 +845,7 @@ li a {
 }
 
 .tar-princ .principles {
+  text-align: left;
   margin-top: 20px;
   width: 100%;
   display: -webkit-box;

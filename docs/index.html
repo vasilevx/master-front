@@ -23,6 +23,7 @@
 	<title>Главная</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="lib/fontawesome-all.min.css">
+	<link href="lib/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
 	<!-- Шапка -->
@@ -57,7 +58,7 @@
 	<!-- Анонс -->
 	<div class="page-content">
 		<section class="announcement wrapper">
-			<div class="announcement-image"><img src="img/announcement.jpg" alt="Северный бал"></div>
+			<div class="announcement-image"><a href="img/announcement.jpg" data-lightbox="image-1"><img src="img/announcement.jpg" alt="Северный бал"></a></div>
 			<div class="announcement-description">
 				<h1 class="title"><a href="#">VII Благотворительный Северный бал</a></h1>
 				<p class="desc">19 мая фонд «Мастер Класс» проведет 7-й Благотворительный Северный бал. Мероприятие пройдет в Мраморном зале Этнографического музея. Вход по приглашениям.</p>
@@ -160,15 +161,15 @@
 		<!-- Галерея Набор фото -->
 		<div class="responsive-box">
 			<ul class="gal-imgs">
-				<li class="gal-img gal-img2x2"><img src="img/gal-1.jpg" alt=""></li>
-				<li class="gal-img"><img src="img/gal-2.jpg" alt=""></li>
-				<li class="gal-img"><img src="img/gal-3.jpg" alt=""></li>
-				<li class="gal-img"><img src="img/gal-4.jpg" alt=""></li>
-				<li class="gal-img gal-master"><img src="img/gal-logo.png" alt=""><p>Подробнее о галерее "Мастер"</p></li>
-				<li class="gal-img"><img src="img/gal-5.jpg" alt=""></li>
-				<li class="gal-img"><img src="img/gal-6.jpg" alt=""></li>
-				<li class="gal-img"><img src="img/gal-7.jpg" alt=""></li>
-				<li class="gal-img"><img src="img/gal-8.jpg" alt=""></li>
+				<li class="gal-img gal-img2x2"><a href="img/gal-1.jpg" data-lightbox="main-gal"><img src="img/gal-1.jpg" alt=""></a></li>
+				<li class="gal-img"><a href="img/gal-2.jpg" data-lightbox="main-gal"><img src="img/gal-2.jpg" alt=""></a></li>
+				<li class="gal-img"><a href="img/gal-3.jpg" data-lightbox="main-gal"><img src="img/gal-3.jpg" alt=""></a></li>
+				<li class="gal-img"><a href="img/gal-4.jpg" data-lightbox="main-gal"><img src="img/gal-4.jpg" alt=""></a></li>
+				<li class="gal-img gal-master"><a href="#"><img src="img/gal-logo.png" alt=""><p>Подробнее о галерее "Мастер"</p></a></li>
+				<li class="gal-img"><a href="img/gal-5.jpg" data-lightbox="main-gal"><img src="img/gal-5.jpg" alt=""></a></li>
+				<li class="gal-img"><a href="img/gal-6.jpg" data-lightbox="main-gal"><img src="img/gal-6.jpg" alt=""></a></li>
+				<li class="gal-img"><a href="img/gal-7.jpg" data-lightbox="main-gal"><img src="img/gal-7.jpg" alt=""></a></li>
+				<li class="gal-img"><a href="img/gal-8.jpg" data-lightbox="main-gal"><img src="img/gal-8.jpg" alt=""></a></li>
 			</ul>
 		</div>
 	</section>
@@ -226,7 +227,7 @@
 				<li>В проекте участвуют профессиональные художники, музыканты, архитекторы, кинематографисты, театральные деятели, писатели, журналисты.</li>
 			</ol>
 		</section>
-		<a href="#"><i class=>Подробнее о фонде</i></a>
+		<a href="#">Подробнее о фонде</a>
 	</div>
 	<!--Футер-->
 	<div class="red-Line"></div>
@@ -257,6 +258,6 @@
 	</footer>
 
 
-
+	<script src="lib/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>

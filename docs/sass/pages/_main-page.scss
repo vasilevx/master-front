@@ -194,7 +194,6 @@ margin-bottom: 10px;
 			//display: none;
 			width: 100%;
 			height: 100%;
-			cursor: pointer;
 		}
 
 		.gal-img {
@@ -341,12 +340,12 @@ margin-bottom: 10px;
 
 .tar-princ {
 	margin-top: 40px;
-	i {
-		display: block;
+	text-align: center;
+	a {
+
 		text-decoration: underline;
 		font-style: italic;
-		text-align: center;
-	}
+		}
 
 	h2 {
 		display: block;
@@ -356,6 +355,7 @@ margin-bottom: 10px;
 	}
 
 	.target {
+		text-align: left;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;
@@ -372,6 +372,7 @@ margin-bottom: 10px;
 	}
 
 	.principles {
+		text-align: left;
 		margin-top: 20px;
 		width: 100%;
 		display: flex;
