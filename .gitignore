@@ -1,5 +1,10 @@
 .sass-cache/
+.git/
 *.css.map
 *.psd
 node_modules/
 gulpfile.js
+manifest.json
+package.json
+package-lock.json
+browserconfig.xml
