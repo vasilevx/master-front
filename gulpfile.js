@@ -4,26 +4,26 @@ var gulp = require('gulp');
 	prefix = require('gulp-autoprefixer')
 
 gulp.task('sass', function() {
-	return gulp.src(['docs/sass/**/*.scss', 'docs/sass/**/*.sass'])
+	return gulp.src(['sass/**/*.scss', 'sass/**/*.sass'])
 	.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
 	.pipe(prefix('last 10 versions'))
-	.pipe(gulp.dest('docs/css'))
+	.pipe(gulp.dest('css'))
 	.pipe(browserSync.reload({stream: true}))
 });
 
 gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
-			baseDir: 'docs'
+			baseDir: ''
 		},
 		notify: false
 	});
 });
 
 gulp.task('watch', ['browser-sync', 'sass'], function() {
-	gulp.watch('docs/sass/**/*.scss', ['sass']);
-	gulp.watch('docs/*.html', browserSync.reload);
-	gulp.watch('docs/js/**/*.js', browserSync.reload);
+	gulp.watch('sass/**/*.scss', ['sass']);
+	gulp.watch(['*.html', '*.php'], browserSync.reload);
+	gulp.watch('js/**/*.js', browserSync.reload);
 
 });
 
