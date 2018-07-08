@@ -1,29 +1,26 @@
-var gulp = require('gulp');
-	sass = require('gulp-sass');
-	browserSync = require('browser-sync');
-	prefix = require('gulp-autoprefixer')
+var gulp = require('gulp'),
+	sass = require('gulp-sass'),
+	livereload = require('gulp-livereload'),
+	prefix = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
 	return gulp.src(['sass/**/*.scss', 'sass/**/*.sass'])
 	.pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
 	.pipe(prefix('last 10 versions'))
-	.pipe(gulp.dest('css'))
-	.pipe(browserSync.reload({stream: true}))
+	.pipe(gulp.dest(''))
+	.pipe(livereload());
 });
 
-gulp.task('browser-sync', function() {
-	browserSync({
-		server: {
-			baseDir: ''
-		},
-		notify: false
-	});
+gulp.task('html', function(){
+  gulp.src(['*.php', '*/*.php', '*.html'])
+      .pipe(livereload());
 });
 
-gulp.task('watch', ['browser-sync', 'sass'], function() {
+gulp.task('watch', function() {
+  livereload.listen();
 	gulp.watch('sass/**/*.scss', ['sass']);
-	gulp.watch(['*.html', '*.php'], browserSync.reload);
-	gulp.watch('js/**/*.js', browserSync.reload);
+	gulp.watch(['*.php', '*/*.php', '*.html'], ['html']);
+	//gulp.watch('js/**/*.js', livereload());
 
 });
 
