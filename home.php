@@ -1,64 +1,10 @@
-<!DOCTYPE html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<link rel="apple-touch-icon" sizes="57x57" href="img/apple-icon-57x57.png"> 
-	<link rel="apple-touch-icon" sizes="60x60" href="img/apple-icon-60x60.png"> 
-	<link rel="apple-touch-icon" sizes="72x72" href="img/apple-icon-72x72.png"> 
-	<link rel="apple-touch-icon" sizes="76x76" href="img/apple-icon-76x76.png"> 
-	<link rel="apple-touch-icon" sizes="114x114" href="img/apple-icon-114x114.png"> 
-	<link rel="apple-touch-icon" sizes="120x120" href="img/apple-icon-120x120.png"> 
-	<link rel="apple-touch-icon" sizes="144x144" href="img/apple-icon-144x144.png"> 
-	<link rel="apple-touch-icon" sizes="152x152" href="img/apple-icon-152x152.png"> 
-	<link rel="apple-touch-icon" sizes="180x180" href="img/apple-icon-180x180.png"> 
-	<link rel="icon" type="image/png" sizes="192x192" href="img/android-icon-192x192.png"> 
-	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> 
-	<link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png"> 
-	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> 
-	<link rel="manifest" href="/manifest.json"> 
-	<meta name="msapplication-TileColor" content="#ffffff"> 
-	<meta name="msapplication-TileImage" content="img/ms-icon-144x144.png"> <meta name="theme-color" content="#ffffff">
-
-	<title>Главная</title>
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="lib/fontawesome-all.min.css">
-	<link href="lib/lightbox.min.css" rel="stylesheet">
-</head>
-<body>
-	<!-- Шапка -->
-	<header class="page-header wrapper">
-		<a href="#" class="logo"></a>
-		<aside class="header-info">
-			<div class="header-contacts"><span class="email">gallery-master@yandex.ru</span><span class="phone">+7 812 640-7737</span></div>
-			<p class="sub-text">Некоммерческая организация международный фонд поддержки культуры &laquo;Мастер Класс&raquo;
-			</p>
-		</aside>
-	</header>
-
-	<div class="grey-line"></div>
-	<nav class="header-menu wrapper">
-		<ul class="socials">
-			<li><a href="https://vk.com/club35656414"><i class="fab fa-vk" aria-hidden="true"></i></a></li>
-			<li><a href="https://instagram.com/gallerymaster/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-
-		</ul>
-		<ul class="navigation underline-grey">
-			<li><a href="#">Галерея &laquo;Мастер&raquo;</a></li>
-			<li><a href="#">Мероприятия</a></li>
-			<li><a href="#">О фонде</a></li>
-			<li><a href="#">Авторы</a></li>
-			<li><a href="#">Контакты</a></li>
-			<li><i class="fal fa-search"></i></li>
-		</ul>
-	</nav>
-	
+<?php get_header(); ?>
 	<!-- Контент -->
 	
 	<!-- Анонс -->
 	<div class="page-content">
 		<section class="announcement wrapper">
-			<div class="announcement-image"><a href="img/announcement.jpg" data-lightbox="image-1"><img src="img/announcement.jpg" alt="Северный бал"></a></div>
+			<div class="announcement-image"><a href="<?php echo get_template_directory_uri(); ?>/img/announcement.jpg" data-lightbox="image-1"><img src="<?php echo get_template_directory_uri(); ?>/img/announcement.jpg" alt="Северный бал"></a></div>
 			<div class="announcement-description">
 				<h1 class="title"><a href="#">VII Благотворительный Северный бал</a></h1>
 				<p class="desc">19 мая фонд «Мастер Класс» проведет 7-й Благотворительный Северный бал. Мероприятие пройдет в Мраморном зале Этнографического музея. Вход по приглашениям.</p>
@@ -86,7 +32,7 @@
 					<li>
 						<a class="afisha-item" href="#">
 							<div class="afisha-img">
-								<img src="img/announcement.jpg" alt="Афиша">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/announcement.jpg" alt="Афиша">
 							</div>
 							<div class="afisha-about">
 								<p class="afisha-date">20 апреля · 19:00</p>
@@ -99,7 +45,7 @@
 					<li>
 						<a class="afisha-item" href="#">
 							<div class="afisha-img">
-								<img src="img/afisha-1.jpg" alt="Афиша">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/afisha-1.jpg" alt="Афиша">
 							</div>
 							<div class="afisha-about">
 								<p class="afisha-date">20 апреля · 19:00</p>
@@ -112,7 +58,7 @@
 					<li>
 						<a class="afisha-item" href="#">
 							<div class="afisha-img">
-								<img src="img/afisha-3.jpg" alt="Афиша">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/afisha-3.jpg" alt="Афиша">
 							</div>
 							<div class="afisha-about">
 								<p class="afisha-date">20 апреля · 19:00</p>
@@ -125,7 +71,7 @@
 					<li>
 						<a class="afisha-item" href="#">
 							<div class="afisha-img">
-								<img src="img/afisha-2.jpg" alt="Афиша">
+								<img src="<?php echo get_template_directory_uri(); ?>/img/afisha-2.jpg" alt="Афиша">
 							</div>
 							<div class="afisha-about">
 								<p class="afisha-date">20 апреля · 19:00</p>
@@ -161,22 +107,22 @@
 		<!-- Галерея Набор фото -->
 		<div class="responsive-box">
 			<ul class="gal-imgs">
-				<li class="gal-img gal-img2x2"><a href="img/gal-1.jpg" data-lightbox="main-gal"><img src="img/gal-1.jpg" alt=""></a></li>
-				<li class="gal-img"><a href="img/gal-2.jpg" data-lightbox="main-gal"><img src="img/gal-2.jpg" alt=""></a></li>
-				<li class="gal-img"><a href="img/gal-3.jpg" data-lightbox="main-gal"><img src="img/gal-3.jpg" alt=""></a></li>
-				<li class="gal-img"><a href="img/gal-4.jpg" data-lightbox="main-gal"><img src="img/gal-4.jpg" alt=""></a></li>
-				<li class="gal-img gal-master"><a href="#"><img src="img/gal-logo.png" alt=""><p>Подробнее о галерее "Мастер"</p></a></li>
-				<li class="gal-img"><a href="img/gal-5.jpg" data-lightbox="main-gal"><img src="img/gal-5.jpg" alt=""></a></li>
-				<li class="gal-img"><a href="img/gal-6.jpg" data-lightbox="main-gal"><img src="img/gal-6.jpg" alt=""></a></li>
-				<li class="gal-img"><a href="img/gal-7.jpg" data-lightbox="main-gal"><img src="img/gal-7.jpg" alt=""></a></li>
-				<li class="gal-img"><a href="img/gal-8.jpg" data-lightbox="main-gal"><img src="img/gal-8.jpg" alt=""></a></li>
+				<li class="gal-img gal-img2x2"><a href="img/gal-1.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-1.jpg" alt=""></a></li>
+				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-2.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-2.jpg" alt=""></a></li>
+				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-3.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-3.jpg" alt=""></a></li>
+				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-4.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-4.jpg" alt=""></a></li>
+				<li class="gal-img gal-master"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-logo.png" alt=""><p>Подробнее о галерее "Мастер"</p></a></li>
+				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-5.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-5.jpg" alt=""></a></li>
+				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-6.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-6.jpg" alt=""></a></li>
+				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-7.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-7.jpg" alt=""></a></li>
+				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-8.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-8.jpg" alt=""></a></li>
 			</ul>
 		</div>
 	</section>
 
 	<!-- Фонд -->
 	<h2 class="letter-spacing-300">ФОНД</h2>
-	<img class="fond-big" src="img/fond-big.jpg" alt="">
+	<img class="fond-big" src="<?php echo get_template_directory_uri(); ?>/img/fond-big.jpg" alt="">
 	<div class="fond-info wrapper">
 
 		<section class="fond-textabout">
@@ -203,11 +149,11 @@
 			<p>Фонд «МАСТЕР КЛАСС» призван искать новые формы и направления в искусстве, сохраняя старые классические традиции, основываясь на профессиональной базе Высшей школы и ставит своей целью приобщение подрастающего поколения к изучению культуры Санкт-Петербурга и мировой культуры, использованию ее лучших достижений для приобретения опыта и практических знаний.</p>
 		</section>
 		<section class="fond-imgs">
-			<img src="img/fond-img1.jpg" alt="">
-			<img src="img/fond-img2.jpg" alt="">
-			<img src="img/fond-img3.jpg" alt="">
-			<img src="img/fond-img4.jpg" alt="">
-			<img src="img/fond-img5.jpg" alt="">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/fond-img1.jpg" alt="">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/fond-img2.jpg" alt="">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/fond-img3.jpg" alt="">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/fond-img4.jpg" alt="">
+			<img src="<?php echo get_template_directory_uri(); ?>/img/fond-img5.jpg" alt="">
 		</section>
 
 	</div>
@@ -229,35 +175,4 @@
 		</section>
 		<a href="#">Подробнее о фонде</a>
 	</div>
-	<!--Футер-->
-	<div class="red-Line"></div>
-	<footer class="page-footer wrapper">
-		
-		<ul class="navigation underline-grey">
-			<li><a href="#">Галерея &laquo;Мастер&raquo;</a>
-			</li>
-			<li><a href="#">Мероприятия</a></li>
-			<li><a href="#">О фонде</a></li>
-			<li><a href="#">Авторы</a></li>
-			<li><a href="#">Контакты</a></li>
-		</ul>
-		
-
-		<p class="footer-fond">Некоммерческая организация международный фонд поддержки культуры &laquo;Мастер Класс&raquo;
-		</p>
-
-		<aside class="copyright">
-			&copy; 1993 &#8212; 2018 &laquo;Мастер Класс&raquo;
-			<ul class="socials">
-				<li><a href="https://vk.com/club35656414"><i class="fab fa-vk" aria-hidden="true"></i></a></li>
-				<li><a href="https://www.instagram.com/gallerymaster/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-			</ul>
-		</aside>
-
-		<p class="adress">191123, Санкт-Петербург, ул. Рылеева, дом 6</p>
-	</footer>
-
-
-	<script src="lib/lightbox-plus-jquery.min.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>
