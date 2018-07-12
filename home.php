@@ -107,7 +107,7 @@
 		<!-- Галерея Набор фото -->
 		<div class="responsive-box">
 			<ul class="gal-imgs">
-				<li class="gal-img gal-img2x2"><a href="img/gal-1.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-1.jpg" alt=""></a></li>
+				<li class="gal-img gal-img2x2"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-1.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-1.jpg" alt=""></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-2.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-2.jpg" alt=""></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-3.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-3.jpg" alt=""></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-4.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-4.jpg" alt=""></a></li>

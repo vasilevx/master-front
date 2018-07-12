@@ -24,8 +24,8 @@
   <meta name="msapplication-TileImage" content="img/ms-icon-144x144.png"> <meta name="theme-color" content="#ffffff">
 
   <title><?php wp_title('—', true, 'right'); ?> <?php bloginfo('name'); ?></title>
-  <link rel="stylesheet" href="lib/fontawesome-all.min.css">
-  <link href="lib/lightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/lib/fontawesome-all.min.css">
+  <link href="<?php echo get_template_directory_uri(); ?>/lib/lightbox.min.css" rel="stylesheet">
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

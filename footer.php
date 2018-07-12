@@ -26,7 +26,7 @@
   <p class="adress">191123, Санкт-Петербург, ул. Рылеева, дом 6</p>
 </footer>
 
-<script src="lib/lightbox-plus-jquery.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/lib/lightbox-plus-jquery.min.js"></script>
 </body>
 <?php wp_footer(); ?>
 </html>
