@@ -29,28 +29,38 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<!-- Шапка -->
-<header class="page-header wrapper">
-  <a href="#" class="logo"></a>
-  <aside class="header-info">
-    <div class="header-contacts"><span class="email">gallery-master@yandex.ru</span><span class="phone">+7 812 640-7737</span></div>
-    <p class="sub-text">Некоммерческая организация международный фонд поддержки культуры &laquo;Мастер Класс&raquo;
-    </p>
-  </aside>
-</header>
-<div class="grey-line"></div>
-<nav class="header-menu wrapper">
-  <ul class="socials">
-    <li><a href="https://vk.com/club35656414"><i class="fab fa-vk" aria-hidden="true"></i></a></li>
-    <li><a href="https://instagram.com/gallerymaster/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-  </ul>
-  <ul class="navigation underline-grey">
-    <li><a href="#">Галерея &laquo;Мастер&raquo;</a></li>
-    <li><a href="#">Мероприятия</a></li>
-    <li><a href="#">О фонде</a></li>
-    <li><a href="#">Авторы</a></li>
-    <li><a href="#">Контакты</a></li>
-    <li><i class="fal fa-search"></i></li>
-  </ul>
-</nav>
+
+  <!-- Шапка -->
+  <header class="page-header wrapper">
+    <p class="header-title">НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ МЕЖДУНАРОДНЫЙ ФОНД ПОДДЕРЖКИ КУЛЬТУРЫ  “МАСТЕР КЛАСС”</p>
+    <div class="grey-line"></div>
+    <div class="header-block">
+      <a href="#" class="logo"></a>
+      <div class="header-contacts">
+        <p>191123,Россия,Санкт-Петербург, ул.Рылеева, д. 6<br>
+          e-mail: gallery-master@yandex.ru<br>
+        +7 (812) 640 77 37</p>
+
+        <ul class="socials">
+          <li><a href="https://vk.com/club35656414"><i class="fab fa-vk" aria-hidden="true"></i></a></li>
+          <li><a href="https://instagram.com/gallerymaster/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+        </ul>
+
+      </div>
+    </div>
+  </header>
+  <div class="grey-line"></div>
+  <nav class="header-menu wrapper">
+    <ul class="navigation underline-grey">
+      <li><a href="#">Галерея &laquo;Мастер&raquo;</a></li>
+      <li><a href="#">Мероприятия</a></li>
+      <li><a href="#">О фонде</a></li>
+      <li><a href="#">Авторы</a></li>
+      <li><a href="#">Контакты</a></li>
+      <li><i class="fal fa-search"></i></li>
+    </ul>
+  </nav>
 <!-- end header -->

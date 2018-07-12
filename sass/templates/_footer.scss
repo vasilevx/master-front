@@ -8,7 +8,7 @@
 	padding-bottom: 15px;
 	.navigation {
 		li {
-			font-size: 1.16666667em; //14/12
+			font-size: $text14; //14/12
 		}
 		margin-bottom: 50px;
 	}
@@ -23,7 +23,16 @@
 
 	}
 	.socials {
-		margin-left: 30px;
+		margin-left: 10px;
+		li {
+			width: 20px;
+			height: 20px;
+
+			a {
+				margin-top: 2px;
+				font-size: $text12;
+			}
+		}
 	}
 
 	.copyright {
