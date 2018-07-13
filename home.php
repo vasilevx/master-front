@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 	<!-- Контент -->
-	
+
 	<!-- Анонс -->
 	<div class="page-content">
 		<section class="announcement wrapper">
 			<div class="announcement-image"><a href="<?php echo get_template_directory_uri(); ?>/img/announcement.jpg" data-lightbox="image-1"><img src="<?php echo get_template_directory_uri(); ?>/img/announcement.jpg" alt="Северный бал"></a></div>
 			<div class="announcement-description">
-				<h1 class="title"><a href="#">VII Благотворительный Северный бал</a></h1>
-				<p class="desc">19 мая фонд «Мастер Класс» проведет 7-й Благотворительный Северный бал. Мероприятие пройдет в Мраморном зале Этнографического музея. Вход по приглашениям.</p>
-				<p class="place-time">Этнографический музей 18:00</p>
+        <h1 class="title dance-title"><a href="#"><span class="dance-title-number">VII</span><span class="dance-title-name">Благотворительный<br>Северный бал</span></a></h1>
+				<p class="desc">19 мая фонд «МАСТЕР КЛАСС» проведет 7-й Благотворительный Северный бал. Мероприятие пройдет в Мраморном зале Этнографического музея. Вход по приглашениям.</p>
+				<p class="place-time">Этнографический музей · 18:00</p>
 			</div>
 		</section>
 
@@ -55,7 +55,7 @@
 							</div>
 						</a>
 					</li>
-					<li>
+          <!--<li>
 						<a class="afisha-item" href="#">
 							<div class="afisha-img">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/afisha-3.jpg" alt="Афиша">
@@ -80,7 +80,7 @@
 								<p class="afisha-place">Галерея «Мастер», ул. Маяковского 41</p>
 							</div>
 						</a>
-					</li>
+					</li>-->
 
 
 				</ul>
@@ -111,7 +111,7 @@
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-2.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-2.jpg" alt=""></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-3.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-3.jpg" alt=""></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-4.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-4.jpg" alt=""></a></li>
-				<li class="gal-img gal-master"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-logo.png" alt=""><p>Подробнее о галерее "Мастер"</p></a></li>
+				<li class="gal-img gal-master"><a href="#"><div><img src="<?php echo get_template_directory_uri(); ?>/img/gal-logo.png" alt=""></div><p><span>Подробнее о галерее &laquo;Мастер&raquo;</span></p></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-5.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-5.jpg" alt=""></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-6.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-6.jpg" alt=""></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-7.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-7.jpg" alt=""></a></li>
@@ -122,7 +122,9 @@
 
 	<!-- Фонд -->
 	<h2 class="letter-spacing-300">ФОНД</h2>
-	<img class="fond-big" src="<?php echo get_template_directory_uri(); ?>/img/fond-big.jpg" alt="">
+  <div class="fond-parallax-container">
+    <img class="fond-big" src="<?php echo get_template_directory_uri(); ?>/img/fond-big.jpg" alt="">
+  </div>
 	<div class="fond-info wrapper">
 
 		<section class="fond-textabout">
@@ -153,7 +155,7 @@
 			<img src="<?php echo get_template_directory_uri(); ?>/img/fond-img2.jpg" alt="">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/fond-img3.jpg" alt="">
 			<img src="<?php echo get_template_directory_uri(); ?>/img/fond-img4.jpg" alt="">
-			<img src="<?php echo get_template_directory_uri(); ?>/img/fond-img5.jpg" alt="">
+			<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/fond-img5.jpg" alt=""> -->
 		</section>
 
 	</div>
@@ -175,4 +177,25 @@
 		</section>
 		<a href="#">Подробнее о фонде</a>
 	</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    $( document ).ready(function() {
+      console.log( $(window).scrollTop()+$(window).height() );
+      console.log('Начало параллакса');
+      console.log( $(".fond-parallax-container").offset().top );
+
+      console.log('Длина прокрутки изображения');
+      console.log($('.fond-big').height()-$('.fond-parallax-container').height());
+      console.log('Сколько px изображение на экране');
+      console.log($('.fond-big').height()+$(window).height());
+
+      console.log(($('.fond-big').height()+$(window).height())/($('.fond-big').height()-$('.fond-parallax-container').height()));
+
+      $(document).on('scroll', function () {
+        //if($(window).scrollTop()+$(window).height() > $(".fond-parallax-container").offset().top){
+          $('.fond-big').css('transform', 'translateY(-'+(($(window).scrollTop()+$(window).height()-$(".fond-parallax-container").offset().top)/(($('.fond-big').height()+$(window).height())/($('.fond-big').height()-$('.fond-parallax-container').height())))+'px)')
+        //}
+      })
+    });
+  </script>
 <?php get_footer(); ?>

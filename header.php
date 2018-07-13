@@ -32,13 +32,12 @@
 
   <!-- Шапка -->
   <header class="page-header wrapper">
-    <p class="header-title">НЕКОММЕРЧЕСКАЯ ОРГАНИЗАЦИЯ МЕЖДУНАРОДНЫЙ ФОНД ПОДДЕРЖКИ КУЛЬТУРЫ  “МАСТЕР КЛАСС”</p>
-    <div class="grey-line"></div>
+    <!--<p class="header-title">Некоммерческая организация международный фонд поддержки культуры &laquo;Мастер Класс&raquo; · 191123, Россия, Санкт-Петербург, ул. Рылеева, д.6</p>
+     <div class="grey-line"></div> -->
     <div class="header-block">
       <a href="#" class="logo"></a>
       <div class="header-contacts">
-        <p>191123,Россия,Санкт-Петербург, ул.Рылеева, д. 6<br>
-          e-mail: gallery-master@yandex.ru<br>
+        <p>gallery-master@yandex.ru<br>
         +7 (812) 640 77 37</p>
 
         <ul class="socials">

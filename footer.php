@@ -3,7 +3,7 @@
 <div class="red-Line"></div>
 <footer class="page-footer wrapper">
 
-  <ul class="navigation underline-grey">
+  <ul class="navigation navigation-footer underline-grey">
     <li><a href="#">Галерея &laquo;Мастер&raquo;</a>
     </li>
     <li><a href="#">Мероприятия</a></li>

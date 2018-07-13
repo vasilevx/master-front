@@ -1,13 +1,13 @@
 .socials {
 	display: inline-flex;
-	width: 150px;
+	width: 120px;
 	justify-content: space-between;
 
 	li {
-		background-color: $grey-light;
-		width: 25px;
-		height: 25px;
-		border-radius: 3px;
+		//background-color: $grey-light;
+		//width: 25px;
+		//height: 25px;
+		//border-radius: 3px;
 		text-align: center;
 		padding: 0;
 		margin: 0;
@@ -15,7 +15,7 @@
 		a {
 			display: block;
 			font-size: $text16;
-			color: #fff;
+			color: $soc-color;
 			margin-top: 1px;
 			border: none;
 			padding: 0;

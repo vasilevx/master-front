@@ -6,11 +6,11 @@
 }
 
 .header-title {
-	text-align: center;
+	text-align: right;
 	display: block;
-	font-size: $text16;
+	font-size: $text12;
 	width: 100%;
-	text-transform: uppercase;
+	color: $soc-color;
 
 	@media(max-width: 750px) {
 		font-size: $text14;
@@ -26,15 +26,13 @@
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: row;
-	padding-top: 15px;
-	padding-bottom: 12px;
+	padding: 15px 0;
 	font-size: $text14; //14 / 16
 
 
 	.header-contacts {
 		position: relative;
 			font-size: $text14; //14 / 16
-			margin-top: 15px;
 			margin-bottom: 0px;
 			text-align: right;
 		}
@@ -43,10 +41,10 @@
 		.logo {
 			display: block;
 			width: 500px;
-			padding: 60px 0;
-			background: url('img/logo.png') top left no-repeat;
+			padding: 42px 0;
+			background: url('img/logo_new2.png') top left no-repeat;
 			background-size: 100% auto;
-			background-image: url('img/logo.svg');
+			background-image: url('img/logo_new2.svg');
 		}
 
 
@@ -81,6 +79,7 @@
 		max-width: 940px;
 		align-items: stretch;
 		justify-content: space-between;
+		flex-direction: row-reverse;
 
 		@media (max-width: 690px) {
 			padding-top: 5px;
