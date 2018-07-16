@@ -78,3 +78,11 @@ li a {
 .text24 {
 	font-size: 1.5em;
 }
+
+.letter-spacing-300 {
+	letter-spacing: 0.3em;
+	text-align: center;
+	margin: 60px 0 15px 0;
+	font-size: $text24;
+	text-transform: uppercase;
+}

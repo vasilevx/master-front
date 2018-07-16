@@ -20,3 +20,26 @@
     }
   }
 }
+
+.search-form {
+  position: relative;
+
+}
+
+.search-form__input {
+  width: 15px;
+  opacity: 0;
+  padding: 2px;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  border: 1px solid $grey-light;
+  outline: none;
+
+  &:focus
+ {
+    opacity: 1;
+    width: 120px;
+  }
+}
+

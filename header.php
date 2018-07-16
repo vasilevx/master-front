@@ -59,7 +59,13 @@
       <li><a href="#">О фонде</a></li>
       <li><a href="#">Авторы</a></li>
       <li><a href="#">Контакты</a></li>
-      <li><i class="fal fa-search"></i></li>
+      <li>
+        <form action="" class="search-form">
+          <i class="fal fa-search"></i>
+          <input type="text" placeholder="Поиск" class="search-form__input">
+
+        </form>
+      </li>
     </ul>
   </nav>
 <!-- end header -->
