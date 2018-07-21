@@ -176,6 +176,7 @@
 			</ol>
 		</section>
 		<a href="#">Подробнее о фонде</a>
+
 	</div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script>
