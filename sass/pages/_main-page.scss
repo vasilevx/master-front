@@ -67,15 +67,18 @@
 		font-size: $text24;
 	}
 	.news {
-		max-width: 450px;
+		max-width: 49%;
 		.news-title {
 			padding-top: 10px;
 		}
 	}
 
 	.afisha {
+		width: 41.67777%;
+
+
 		& > h2 {
-			margin-left: 70px;
+			margin-left: 23%;
 		}
 
 
@@ -88,7 +91,6 @@
 		.afisha-item {
 			display: flex;
 			justify-content: space-between;
-			max-width: 334px;
 			padding: 10px 0;
 			text-align: left;
 			.afisha-about {
@@ -116,7 +118,7 @@
 					width: 100%;
 					height: auto;
 				}
-				margin-right: 5px;
+				margin-right: 15px;
 			}
 		}
 	}
