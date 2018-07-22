@@ -11,7 +11,7 @@ Author URI:
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -684,17 +684,7 @@ li a {
   }
 }
 
-.gallery {
-  text-align: center;
-}
-
-.gallery p {
-  display: inline-block;
-  max-width: 600px;
-  text-align: center;
-}
-
-.gallery .gal-formats {
+.gal-formats {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -708,12 +698,22 @@ li a {
           flex-wrap: wrap;
 }
 
-.gallery .gal-formats li {
+.gal-formats li {
   padding: 0 10px;
 }
 
-.gallery .gal-formats li a {
+.gal-formats li a {
   color: #bb2721;
+}
+
+.gallery {
+  text-align: center;
+}
+
+.gallery p {
+  display: inline-block;
+  max-width: 600px;
+  text-align: center;
 }
 
 .gallery .responsive-box {
@@ -1036,6 +1036,186 @@ li a {
   }
 }
 
+.gal-intro {
+  margin-top: 100px;
+  text-align: center;
+  max-width: 780px;
+}
+
+.gal-intro__logo {
+  margin-bottom: 35px;
+}
+
+.gal-intro__services {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 620px;
+  margin-top: 65px;
+}
+
+.w-620 {
+  text-align: left;
+  margin: 50px auto;
+  max-width: 620px;
+}
+
+.gal-intro p span {
+  color: #bb2721;
+}
+
+.gal-intro__bold-title {
+  font-weight: bold;
+}
+
+.gal-photos__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.gal-photos__list img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: block;
+}
+
+.gal-photos__list li {
+  padding: 0;
+  margin: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.gal-locations {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.gal-locations .gal-location {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 10px;
+  max-width: 300px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.gal-locations .gal-location__stat {
+  margin-right: 12px;
+}
+
+.gal-locations .gal-location__number {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.gal-locations .gal-location__photo {
+  width: 100%;
+  height: auto;
+}
+
+.gal-locations h2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+@media (max-width: 460px) {
+  .gal-locations {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .gal-locations .gal-location {
+    max-width: none;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.gal-location__icons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 10px;
+}
+
+.gal-location__icons img {
+  margin-left: 10px;
+}
+
+.eng-red-clr {
+  color: #bb2721;
+}
+
+.t14 {
+  font-size: 0.875rem;
+}
+
+.gal-before-map {
+  margin-bottom: 25px;
+}
+
+.gal-before-map a {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  position: relative;
+  display: inline-block;
+}
+
+.gal-before-map a img {
+  position: absolute;
+  bottom: 5px;
+  right: -25px;
+}
+
+.gal-before-map a:hover, .gal-before-map a:focus {
+  border-bottom: 1px solid #bb2721;
+}
+
+.ya-map {
+  margin-top: 55px;
+  margin-bottom: -156px;
+}
+
 .org-sostav {
   margin-top: 100px;
 }
@@ -1343,11 +1523,6 @@ li a {
 
 .history__photos-more .num {
   font-style: 1.5rem;
-}
-
-.ya-map {
-  max-width: 940px;
-  width: 100%;
 }
 
 .dance-title-name {
