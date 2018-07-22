@@ -1,3 +1,40 @@
+<?php
+
+$afisha_events = new WP_Query([
+        'post_type' => 'event',
+        'posts_per_page' => 2,
+        'orderby' => 'meta_value',
+        'order' => 'DESC',
+        'offset' => -1,
+        'meta_query' => [
+          [
+            'key' => 'event_end',
+            'value' => date('d.m.Y H:i'),
+            'type' => 'datetime',
+            'compare' => '<'
+          ],
+
+        ]
+]);
+
+$months = array( 1 => 'Января' , 'Февраля' , 'Марта' , 'Апреля' , 'Мая' , 'Июня' , 'Июля' , 'Августа' , 'Сентября' , 'Октября' , 'Ноября' , 'Декабря' );
+foreach ($months as &$month) $month = mb_strtolower($month);
+unset($month);
+
+/*
+echo '<pre>';
+var_dump($query);
+echo '</pre>';*/
+/*
+while ( $query->have_posts() ) {
+  $query->the_post();
+echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)))];
+  echo the_title();
+  echo get_post_meta($post->ID, 'event_end', true);
+}
+*/
+?>
+
 <?php get_header(); ?>
 	<!-- Контент -->
 
@@ -29,20 +66,28 @@
 			<section class="afisha">
 				<h2><a href="#">Афиша</a></h2>
 				<ul class="afisha-list">
-					<li>
-						<a class="afisha-item" href="#">
-							<div class="afisha-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/announcement.jpg" alt="Афиша">
-							</div>
-							<div class="afisha-about">
-								<p class="afisha-date">20 апреля · 19:00</p>
-								<h2 class="afisha-title">Бина Мараччини «Русские костюмы»</h2>
-								<p class="afisha-description">Презентация коллекции весна-лето 2018</p>
-								<p class="afisha-place">Галерея «Мастер», ул. Маяковского 41</p>
-							</div>
-						</a>
-					</li>
-					<li>
+          <?php while ( $afisha_events->have_posts() ) : $afisha_events->the_post()?>
+            <li>
+              <a class="afisha-item" href="<?=get_the_permalink($post->ID)?>">
+                <div class="afisha-img">
+                  <?=get_the_post_thumbnail($post->ID) ?>
+                </div>
+                <div class="afisha-about">
+                  <p class="afisha-date">
+                    <?=date( 'd' , strtotime(get_post_meta($post->ID, 'event_begin', true))).' '.$months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)))] ?>
+                    ·
+                    <?=date( 'H:i' , strtotime(get_post_meta($post->ID, 'event_begin', true))) ?>
+                  </p>
+                  <h2 class="afisha-title"><?=get_the_title()?></h2>
+                  <p class="afisha-description"><?=get_post_meta($post->ID, 'event_short', true)?></p>
+                  <p class="afisha-place">
+                    <?=get_term_meta(get_the_terms($post->ID, 'places')['0']->term_id, 'place_address', true)?>
+                  </p>
+                </div>
+              </a>
+            </li>
+          <?php endwhile; ?>
+          <!--<li>
 						<a class="afisha-item" href="#">
 							<div class="afisha-img">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/afisha-1.jpg" alt="Афиша">
@@ -55,7 +100,7 @@
 							</div>
 						</a>
 					</li>
-          <!--<li>
+          <li>
 						<a class="afisha-item" href="#">
 							<div class="afisha-img">
 								<img src="<?php echo get_template_directory_uri(); ?>/img/afisha-3.jpg" alt="Афиша">
@@ -176,6 +221,7 @@
 			</ol>
 		</section>
 		<a href="#">Подробнее о фонде</a>
+
 	</div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script>
