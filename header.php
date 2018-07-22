@@ -35,7 +35,11 @@
     <!--<p class="header-title">Некоммерческая организация международный фонд поддержки культуры &laquo;Мастер Класс&raquo; · 191123, Россия, Санкт-Петербург, ул. Рылеева, д.6</p>
      <div class="grey-line"></div> -->
     <div class="header-block">
-      <a href="#" class="logo"></a>
+      <?php if(is_home()): ?>
+        <div class="logo"></div>
+      <?php else :?>
+        <a href="<?=get_home_url()?>" class="logo"></a>
+      <?php endif ?>
       <div class="header-contacts">
         <p>gallery-master@yandex.ru<br>
         +7 (812) 640 77 37</p>
@@ -54,6 +58,24 @@
   <div class="grey-line"></div>
   <nav class="header-menu wrapper">
     <ul class="navigation underline-grey">
+      <?php
+      wp_nav_menu( [
+          'menu'            => 'main-menu',
+          'container'       => false,
+          'items_wrap'      => '%3$s',
+      ] );
+      ?>
+      <li>
+        <form action="" class="search-form">
+          <i class="fal fa-search"></i>
+          <input type="text" placeholder="Поиск" class="search-form__input">
+
+        </form>
+      </li>
+    </ul>
+  </nav>
+  <!--<nav class="header-menu wrapper">
+    <ul class="navigation underline-grey">
       <li><a href="#">Галерея &laquo;Мастер&raquo;</a></li>
       <li><a href="#">Мероприятия</a></li>
       <li><a href="#">О фонде</a></li>
@@ -67,5 +89,5 @@
         </form>
       </li>
     </ul>
-  </nav>
+  </nav>-->
 <!-- end header -->

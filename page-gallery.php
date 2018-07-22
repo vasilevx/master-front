@@ -110,7 +110,7 @@ get_header(); ?>
 
 	</div>
 
-	<iframe class="ya-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A223c1a6b2e1244fc70cd8b83188f7d7fdb06e0061770da318fb9425e26ed3670&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
+	<iframe class="ya-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A223c1a6b2e1244fc70cd8b83188f7d7fdb06e0061770da318fb9425e26ed3670&amp;source=constructor" width="100%" height="700" frameborder="0"></iframe>
 
 
 
