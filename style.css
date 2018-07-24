@@ -403,9 +403,10 @@ li a {
 .navigation li {
   text-align: center;
   display: inline-block;
-  padding: 0 10px;
+  margin: 0 10px;
   color: #212121;
   line-height: 1;
+  position: relative;
 }
 
 .navigation li:first-child {
@@ -416,6 +417,22 @@ li a {
 .navigation li:last-child {
   padding-right: 0;
   margin-right: 0;
+}
+
+.current-menu-item a {
+  pointer-events: none;
+  border-bottom: none;
+  color: #bb2721;
+}
+
+.current-menu-item:before {
+  height: 1px;
+  content: '';
+  width: 100%;
+  display: inline-block;
+  background: #bb2721;
+  position: absolute;
+  top: -9px;
 }
 
 .search-form {

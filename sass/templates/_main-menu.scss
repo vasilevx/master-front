@@ -4,9 +4,10 @@
   li {
     text-align: center;
     display: inline-block;
-    padding: 0 10px;
+    margin: 0 10px;
     color: $grey-text;
     line-height: 1;
+    position: relative;
     &:first-child {
       padding-left: 0;
       margin-left: 0;
@@ -19,6 +20,25 @@
       @extend .link-red;
     }
   }
+}
+
+.current-menu-item{
+  a{
+    pointer-events: none;
+    border-bottom: none;
+    color: $eng-red;
+  }
+
+  &:before{
+    height: 1px;
+    content: '';
+    width: 100%;
+    display: inline-block;
+    background: $eng-red;
+    position: absolute;
+    top: -9px;
+  }
+
 }
 
 .search-form {

@@ -156,7 +156,7 @@ echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-2.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-2.jpg" alt=""></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-3.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-3.jpg" alt=""></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-4.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-4.jpg" alt=""></a></li>
-				<li class="gal-img gal-master"><a href="#"><div><img src="<?php echo get_template_directory_uri(); ?>/img/gal-logo.png" alt=""></div><p><span>Подробнее о галерее &laquo;Мастер&raquo;</span></p></a></li>
+				<li class="gal-img gal-master"><a href="<?=get_page_link(get_page_by_path('gallery-master'))?>"><div><img src="<?php echo get_template_directory_uri(); ?>/img/gal-logo.png" alt=""></div><p><span>Подробнее о галерее &laquo;Мастер&raquo;</span></p></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-5.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-5.jpg" alt=""></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-6.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-6.jpg" alt=""></a></li>
 				<li class="gal-img"><a href="<?php echo get_template_directory_uri(); ?>/img/gal-7.jpg" data-lightbox="main-gal"><img src="<?php echo get_template_directory_uri(); ?>/img/gal-7.jpg" alt=""></a></li>
