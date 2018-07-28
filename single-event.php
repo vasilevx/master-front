@@ -8,7 +8,7 @@
 <div class="page-content">
     <div class="event wrapper">
         <?php if(have_posts()): the_post()?>
-            <img src="<?=get_post_meta($post->ID, 'event_photos')[0]['guid']?>" alt=""/>
+            <!--<img src="<?=get_post_meta($post->ID, 'event_photos')[0]['guid']?>" alt=""/> для работы с фотками-->
             <span class="event__title-label">мероприятие <?= get_the_terms($post->ID, 'event_type')[0]->name?></span>
             <h1 class="event__title"><?=get_the_title()?></h1>
             <div class="event__left-container">
