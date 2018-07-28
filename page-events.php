@@ -5,14 +5,64 @@ Template Name: events
 get_header(); ?>
 <!-- Контент -->
 
+
+<?php
+
+$params = [
+	'type' => $_GET['event_type'],
+	'year' => $_GET['event_year']
+];
+
+if($params['year'])
+	$events = new WP_Query([
+		'post_type' => 'event',
+		'orderby' => 'meta_value_num',
+		'order' => 'DESC',
+		'meta_query' => [
+			[
+				'key' => 'event_begin-date',
+				'value' => [date('Y-m-d', mktime(0, 0, 0, 1, 1, $params['year'])), date('Y-m-d', mktime(0, 0, 0, 1, 1, $params['year']+1)-1)],
+				'type' => 'DATE',
+				'compare' => 'BETWEEN'
+			]
+		],
+		'event_type' => $params['type']
+	]);
+else
+	$events = new WP_Query([
+		'post_type' => 'event',
+		'orderby' => 'meta_value',
+		'meta_key' => 'event_begin-date',
+		'order' => 'DESC',
+		'event_type' => $params['type']
+	]);
+
+//$year = $current_year = date('Y');
+
+$events_grouped_by_year = [];
+foreach($events->posts as $event){
+	$year = get_post_meta($event->ID, 'event_begin-date', true);
+	$year = new DateTime($year);
+	$events_grouped_by_year["".$year->format('Y').""][] = $event;
+}
+
+
+/*
+echo '<pre>';
+var_dump($events_grouped_by_year);
+echo '</pre>';
+$first_year = $prev_year = $current_year = date('Y');
+*/
+?>
+
 <!-- Анонс -->
 <div class="page-content">
 	<div class="events wrapper">
 		<h1 class="letter-spacing-300">МЕРОПРИЯТИЯ</h1>
 
 		<ul class="events__place-switches">
-			<li><a href="#" class="events__cur-place">в галерее «Мастер»</a></li>
-			<li><a href="#">фонда</a></li>
+			<li><a href="?event_type=gallery&event_year=<?php $params['year'] ?>" <?= ($params['type'] == 'gallery') ? 'class="events__cur-place"' : ''?>>в галерее «Мастер»</a></li>
+			<li><a href="?event_type=fund&event_year=<?php $params['year'] ?>" <?= ($params['type'] == 'fund') ? 'class="events__cur-place"' : ''?>>фонда</a></li>
 		</ul>
 
 		<div class="events__years-events">
@@ -29,6 +79,26 @@ get_header(); ?>
 				<li><a href="#">2009</a></li>
 			</ul>
 			<ul class="events__events-all-list">
+
+
+				<?php foreach($events_grouped_by_year as $year => $year_events): ?>
+					<li class="events__year-events">
+						<span class="events__year"><?=$year?></span>
+						<ul class="events__events-in-year grid">
+						<?php foreach($year_events as $event): ?>
+							<li class="events__single-event grid-item">
+								<div class="events__image-container">
+									<?= get_the_post_thumbnail($event->ID, 'large'); ?>
+								</div>
+								<span class="events__before-event-title">предстоящее</span>
+								<h2 class="events__event-title"><a href="<?=get_permalink($event->ID)?>"><?=$event->post_title?></a></h2>
+								<p>Акция посвящена явлению Августовской Божьей Матери.</p>
+							</li>
+						<?php endforeach ?>
+						</ul>
+					</li>
+				<?php endforeach?>
+				<!--
 				<li class="events__year-events">
 					<span class="events__year">2018</span>
 					<ul class="events__events-in-year">
@@ -79,13 +149,19 @@ get_header(); ?>
 						</li>
 					</ul>
 				</li>
-
+				-->
 
 			</ul>
 		</div>
 	</div>
 </div>
-
-
-
 <?php get_footer(); ?>
+
+<script>
+	/*$(document).ready(function(){
+		$('.grid').masonry({
+			itemSelector: '.grid-item',
+			gutter: 20
+		});
+	});*/
+</script>

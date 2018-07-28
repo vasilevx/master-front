@@ -1,5 +1,7 @@
 <?php
 
+require_once('classes/Helpers.php');
+
 $afisha_events = new WP_Query([
         'post_type' => 'event',
         'posts_per_page' => 2,
@@ -8,18 +10,14 @@ $afisha_events = new WP_Query([
         'offset' => -1,
         'meta_query' => [
           [
-            'key' => 'event_end',
-            'value' => date('d.m.Y H:i'),
-            'type' => 'datetime',
+            'key' => 'event_end-date',
+            'value' => date('d.m.Y'),
+            'type' => 'date',
             'compare' => '<'
           ],
 
         ]
 ]);
-
-$months = array( 1 => 'Января' , 'Февраля' , 'Марта' , 'Апреля' , 'Мая' , 'Июня' , 'Июля' , 'Августа' , 'Сентября' , 'Октября' , 'Ноября' , 'Декабря' );
-foreach ($months as &$month) $month = mb_strtolower($month);
-unset($month);
 
 /*
 echo '<pre>';
@@ -74,9 +72,9 @@ echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)
                 </div>
                 <div class="afisha-about">
                   <p class="afisha-date">
-                    <?=date( 'd' , strtotime(get_post_meta($post->ID, 'event_begin', true))).' '.$months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)))] ?>
+                    <?=date( 'd' , strtotime(get_post_meta($post->ID, 'event_begin-date', true))).' '.Helpers::getRusMonth(get_post_meta($post->ID, 'event_begin-date', true), 'lower')?>
                     ·
-                    <?=date( 'H:i' , strtotime(get_post_meta($post->ID, 'event_begin', true))) ?>
+                    <?=date( 'H:i' , strtotime(get_post_meta($post->ID, 'event_begin-time', true))) ?>
                   </p>
                   <h2 class="afisha-title"><?=get_the_title()?></h2>
                   <p class="afisha-description"><?=get_post_meta($post->ID, 'event_short', true)?></p>

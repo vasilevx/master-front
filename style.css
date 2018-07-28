@@ -1072,24 +1072,26 @@ li a {
 }
 
 .events__place-switches a {
-  color: #bb2721;
-}
-
-.events__place-switches .events__cur-place {
-  border-bottom: 1px dashed #989898;
   color: #212121;
   -webkit-transition: .33s all;
   -o-transition: .33s all;
   transition: .33s all;
   cursor: pointer;
+  border-bottom: 1px dashed #989898;
 }
 
-.events__place-switches .events__cur-place:hover, .events__place-switches .events__cur-place:focus {
+.events__place-switches a:hover, .events__place-switches a:focus {
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
   color: #bb2721;
   outline: none;
+}
+
+.events__place-switches .events__cur-place {
+  color: #bb2721;
+  pointer-events: none !important;
+  border-bottom: none;
 }
 
 .events__years-events {
@@ -1710,6 +1712,45 @@ li a {
 
 .history__photos-more .num {
   font-style: 1.5rem;
+}
+
+.event__title {
+  font-size: 1.875rem;
+  margin-bottom: 50px;
+}
+
+.event__title-label {
+  font-size: 0.875rem;
+  display: block;
+  line-height: 1;
+  color: #989898;
+}
+
+.event__left-container {
+  width: 49%;
+  float: left;
+}
+
+.event__announcement {
+  line-height: 1.5;
+}
+
+.event__right-container {
+  width: 41.666666667%;
+  float: right;
+}
+
+.event__time {
+  display: inline-block;
+}
+
+.event__date {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.event__place {
+  display: inline-block;
 }
 
 .dance-title-name {

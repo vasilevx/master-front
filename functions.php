@@ -7,8 +7,8 @@ function enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 
 function enqueue_scripts() {
-  if(is_page(47) or is_page(49) or is_page(51) or is_page(60) or is_page('contacts')){
-    wp_enqueue_script( 'request', get_template_directory_uri() . '/js/request.js' );
+  if(is_page('events')){
+    wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js' );
   }
 }
 

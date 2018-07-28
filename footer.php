@@ -16,7 +16,7 @@
   </p>
 
   <aside class="copyright">
-    &copy; 1993 &#8212; 2018 &laquo;Мастер Класс&raquo;
+    &copy; 1993&#8212;2018 &laquo;Мастер Класс&raquo;
     <ul class="socials">
       <li><a href="https://vk.com/club35656414"><i class="fab fa-vk" aria-hidden="true"></i></a></li>
       <li><a href="https://instagram.com/gallerymaster/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>

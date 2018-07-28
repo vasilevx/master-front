@@ -1,0 +1,41 @@
+.event{
+
+  &__title{
+    font-size: $text30;
+    margin-bottom: 50px;
+  }
+
+  &__title-label{
+    font-size: $text14;
+    display: block;
+    line-height: 1;
+    color: $soc-color;
+  }
+
+  &__left-container{
+    width: 49%;
+    float: left;
+  }
+
+  &__announcement{
+    line-height: 1.5;
+  }
+
+  &__right-container{
+    width: 41.666666667%;
+    float: right;
+  }
+
+  &__time{
+    display: inline-block;
+  }
+
+  &__date{
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  &__place{
+    display: inline-block;
+  }
+}

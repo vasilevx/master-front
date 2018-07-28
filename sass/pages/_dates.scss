@@ -10,22 +10,22 @@
 	line-height: 14px;
 
 	a {
+	  color: $grey-text;
+	  transition: .33s all;
+	  cursor: pointer;
+	  border-bottom: 1px dashed $soc-color;
+	  &:hover,
+	  &:focus {
+		transition: none;
 		color: $eng-red;
+		outline: none;
+	  }
 	}
 
 	.events__cur-place {
-		
-		border-bottom: 1px dashed $soc-color;
-
-		color: $grey-text; 
-		transition: .33s all;
-		cursor: pointer;
-		&:hover,
-		&:focus {
-			transition: none;
-			color: $eng-red;
-			outline: none;
-		}
+	  color: $eng-red;
+	  pointer-events: none !important;
+	  border-bottom: none;
 	}
 }
 
@@ -110,7 +110,7 @@
 
 	img {
 		display: block;
-		width: 100%;
+	  	width: 100%;
 		height: auto;
 	}
 
@@ -118,6 +118,10 @@
 		font-size: $text14;
 		line-height: 21/14 * 1em;
 	}
+}
+
+.events__image-container{
+
 }
 
 .events__before-event-title {
