@@ -2,26 +2,33 @@
 
 require_once('classes/Helpers.php');
 
-$afisha_events = new WP_Query([
-        'post_type' => 'event',
-        'posts_per_page' => 2,
-        'orderby' => 'meta_value',
-        'order' => 'DESC',
-        'offset' => -1,
-        'meta_query' => [
-          [
-            'key' => 'event_end-date',
-            'value' => date('d.m.Y'),
-            'type' => 'date',
-            'compare' => '<'
-          ],
+$count_of_afisha_events = 2;
 
-        ]
+$afisha_events = new WP_Query([
+    'post_type' => 'event',
+    'posts_per_page' => $count_of_afisha_events,
+    'orderby' => 'meta_value',
+    'meta_key' => 'event_begin-date',
+    'order' => 'ASC',
+    'meta_query' => [
+        [
+            'key' => 'event_end-date',
+            'value' => date('Y-m-d'),
+            'type' => 'date',
+            'compare' => '>'
+        ],
+
+    ]
+]);
+
+$news = new WP_Query([
+        'category_name' => 'news',
+        'posts_per_page' => 5
 ]);
 
 /*
 echo '<pre>';
-var_dump($query);
+var_dump($afisha_events);
 echo '</pre>';*/
 /*
 while ( $query->have_posts() ) {
@@ -53,10 +60,12 @@ echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)
 			<section class="news">
 				<h2><a href="#">Новости</a></h2>
 				<ul class="news-list underline-grey">
-					<li class="news-title"><a href="#">Приглашаем на ежегодную выставку «Осетинская палитра на берегах Невы»</a></li>
-					<li class="news-title"><a href="#">Приглашаем на органные концерты!</a></li>
-					<li class="news-title"><a href="#">Опубликованы фотографии с акции «Дети рисуют в храме»</a></li>
-					<li class="news-title"><a href="#">Завершилась акция «Дети рисуют в храме»</a></li>
+                    <?php while ( $news->have_posts() ) : $news->the_post()?>
+					    <li class="news-title"><a href="<?=get_the_permalink()?>"><?=get_the_title()?></a></li>
+                    <?php endwhile; ?>
+<!--					<li class="news-title"><a href="#">Приглашаем на органные концерты!</a></li>-->
+<!--					<li class="news-title"><a href="#">Опубликованы фотографии с акции «Дети рисуют в храме»</a></li>-->
+<!--					<li class="news-title"><a href="#">Завершилась акция «Дети рисуют в храме»</a></li>-->
 				</ul>
 				<p class="arch underline-grey"><a href="#">Архив</a></p>
 			</section>
@@ -79,7 +88,11 @@ echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)
                   <h2 class="afisha-title"><?=get_the_title()?></h2>
                   <p class="afisha-description"><?=get_post_meta($post->ID, 'event_short', true)?></p>
                   <p class="afisha-place">
-                    <?=get_term_meta(get_the_terms($post->ID, 'places')['0']->term_id, 'place_address', true)?>
+                    <?php
+                        echo get_term_meta(get_the_terms($post->ID, 'places')['0']->term_id, 'place_address')[0];
+                        if (get_the_terms($post->ID, 'places')[1])
+                            echo ' и др.';
+                    ?>
                   </p>
                 </div>
               </a>
@@ -218,7 +231,7 @@ echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)
 				<li>В проекте участвуют профессиональные художники, музыканты, архитекторы, кинематографисты, театральные деятели, писатели, журналисты.</li>
 			</ol>
 		</section>
-		<a href="#">Подробнее о фонде</a>
+		<a href="<?=get_page_link(get_page_by_path('about'))?>">Подробнее о фонде</a>
 
 	</div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

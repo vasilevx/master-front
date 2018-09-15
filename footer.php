@@ -4,12 +4,13 @@
 <footer class="page-footer wrapper">
 
   <ul class="navigation navigation-footer underline-grey">
-    <li><a href="#">Галерея &laquo;Мастер&raquo;</a>
-    </li>
-    <li><a href="#">Мероприятия</a></li>
-    <li><a href="#">О фонде</a></li>
-    <li><a href="#">Авторы</a></li>
-    <li><a href="#">Контакты</a></li>
+      <?php
+      wp_nav_menu( [
+          'menu'            => 'main-menu',
+          'container'       => false,
+          'items_wrap'      => '%3$s',
+      ] );
+      ?>
   </ul>
 
   <p class="footer-fond">Некоммерческая организация международный фонд поддержки культуры &laquo;Мастер Класс&raquo;
@@ -30,6 +31,9 @@
 </footer>
 
 <script src="<?php echo get_template_directory_uri(); ?>/lib/lightbox-plus-jquery.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/photoswipe.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/photoswipe-ui-default.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/masonry.pkgd.min.js"></script>
 </body>
 <?php wp_footer(); ?>
 </html>

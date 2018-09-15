@@ -106,6 +106,7 @@ table {
 
 .page-footer .navigation {
   margin-bottom: 50px;
+  min-width: 50%;
 }
 
 .page-footer .navigation li {
@@ -873,9 +874,11 @@ li a {
   background: -webkit-linear-gradient(top, #eb6c61, #d04e43);
   background: -o-linear-gradient(top, #eb6c61, #d04e43);
   background: linear-gradient(to bottom, #eb6c61, #d04e43);
-  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 40px 40px -15px rgba(209, 79, 68, 0.4), 0 25px 15px -20px rgba(209, 79, 68, 0.5);
+          box-shadow: 0 40px 40px -15px rgba(209, 79, 68, 0.4), 0 25px 15px -20px rgba(209, 79, 68, 0.5);
   padding: 25px;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
 }
 
 .fond-redblock h2 {
@@ -1717,6 +1720,7 @@ li a {
 .event__title {
   font-size: 1.875rem;
   margin-bottom: 50px;
+  max-width: 50%;
 }
 
 .event__title-label {
@@ -1726,9 +1730,30 @@ li a {
   color: #989898;
 }
 
+.event__top-containers {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .event__left-container {
   width: 49%;
   float: left;
+}
+
+.event__data {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 16px;
+  color: #bb2721;
 }
 
 .event__announcement {
@@ -1742,15 +1767,36 @@ li a {
 
 .event__time {
   display: inline-block;
+  margin-right: 15px;
 }
 
 .event__date {
   display: inline-block;
-  margin-left: 15px;
 }
 
 .event__place {
   display: inline-block;
+  margin-top: 24px;
+}
+
+.event__photos {
+  margin-top: 80px;
+}
+
+.event__photos .picture-container {
+  margin: 0 -.5%;
+}
+
+.event__photos .picture {
+  max-width: 25%;
+  padding: .2% .5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.event__photos img {
+  width: 100%;
+  height: auto;
 }
 
 .dance-title-name {

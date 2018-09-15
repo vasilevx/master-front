@@ -304,8 +304,10 @@
 	margin-bottom: -240px;
 	max-width: 460px;
 	background: linear-gradient(to bottom, #eb6c61,#d04e43);
-	box-shadow: 0 0 12px rgba(0,0,0,0.3);
+	box-shadow: 0 40px 40px -15px rgba(209, 79, 68, .4),
+				0 25px 15px -20px rgba(209, 79, 68, .5);
 	padding: 25px;
+	border-radius: 2px;
 	h2 {
 		font-size: 1.87500em;
 		font-family: PT Serif;

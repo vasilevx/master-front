@@ -26,7 +26,9 @@
   <title><?php wp_title('—', true, 'right'); ?> <?php bloginfo('name'); ?></title>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/lib/fontawesome-all.min.css">
   <link href="<?php echo get_template_directory_uri(); ?>/lib/lightbox.min.css" rel="stylesheet">
-  <?php wp_head(); ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/photoswipe.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/default-skin/default-skin.css">
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
