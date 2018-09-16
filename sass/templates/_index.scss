@@ -64,19 +64,23 @@ li a {
 }
 
 .text12 {
-	font-size: 0.75em;
+	font-size: $text12;
 }
 
 .text14 {
-	font-size: 0.875em;
+	font-size: $text14;
 }
 
 .text72 {	
-	font-size: 4.5em; //72 / 16
+	font-size: $text72; //72 / 16
 }
 
 .text24 {
-	font-size: 1.5em;
+	font-size: $text24;
+}
+
+.text30{
+	font-size: $text30;
 }
 
 .letter-spacing-300 {

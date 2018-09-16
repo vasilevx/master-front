@@ -1,8 +1,7 @@
 .event{
 
   &__title{
-    font-size: $text30;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
     max-width: 50%;
   }
 
@@ -22,6 +21,11 @@
   &__left-container{
     width: 49%;
     float: left;
+    line-height: 1.5;
+
+    p{
+      margin-bottom: 1.5em;
+    }
   }
 
   &__right-container{

@@ -1,0 +1,26 @@
+.article{
+
+  &__title{
+    @include span(8);
+    margin-bottom: $margin4;
+    line-height: 40px;
+  }
+
+  &__flex-containers{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left-container{
+    @include span(8);
+  }
+
+  &__right-container{
+    @include span(3);
+  }
+
+  p{
+    line-height: 25/16*1em;
+    margin-bottom: 25/16*1em;
+  }
+}

@@ -45,20 +45,20 @@ echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)
 
 	<!-- Анонс -->
 	<div class="page-content">
-		<section class="announcement wrapper">
-			<div class="announcement-image"><a href="<?php echo get_template_directory_uri(); ?>/img/announcement.jpg" data-lightbox="image-1"><img src="<?php echo get_template_directory_uri(); ?>/img/announcement.jpg" alt="Северный бал"></a></div>
-			<div class="announcement-description">
-        <h1 class="title dance-title"><a href="#"><span class="dance-title-number">VII</span><span class="dance-title-name">Благотворительный<br>Северный бал</span></a></h1>
-				<p class="desc">19 мая фонд «МАСТЕР КЛАСС» проведет 7-й Благотворительный Северный бал. Мероприятие пройдет в Мраморном зале Этнографического музея. Вход по приглашениям.</p>
-				<p class="place-time">Этнографический музей · 18:00</p>
-			</div>
-		</section>
+<!--		<section class="announcement wrapper">-->
+<!--			<div class="announcement-image"><a href="--><?php //echo get_template_directory_uri(); ?><!--/img/announcement.jpg" data-lightbox="image-1"><img src="--><?php //echo get_template_directory_uri(); ?><!--/img/announcement.jpg" alt="Северный бал"></a></div>-->
+<!--			<div class="announcement-description">-->
+<!--        <h1 class="title dance-title"><a href="#"><span class="dance-title-number">VII</span><span class="dance-title-name">Благотворительный<br>Северный бал</span></a></h1>-->
+<!--				<p class="desc">19 мая фонд «МАСТЕР КЛАСС» проведет 7-й Благотворительный Северный бал. Мероприятие пройдет в Мраморном зале Этнографического музея. Вход по приглашениям.</p>-->
+<!--				<p class="place-time">Этнографический музей · 18:00</p>-->
+<!--			</div>-->
+<!--		</section>-->
 
 
 		<!-- Новости и Афиша -->
 		<section class="news-afisha wrapper">
 			<section class="news">
-				<h2><a href="#">Новости</a></h2>
+				<h2>Новости</h2>
 				<ul class="news-list underline-grey">
                     <?php while ( $news->have_posts() ) : $news->the_post()?>
 					    <li class="news-title"><a href="<?=get_the_permalink()?>"><?=get_the_title()?></a></li>
@@ -67,11 +67,11 @@ echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)
 <!--					<li class="news-title"><a href="#">Опубликованы фотографии с акции «Дети рисуют в храме»</a></li>-->
 <!--					<li class="news-title"><a href="#">Завершилась акция «Дети рисуют в храме»</a></li>-->
 				</ul>
-				<p class="arch underline-grey"><a href="#">Архив</a></p>
+<!--				<p class="arch underline-grey"><a href="#">Архив</a></p>-->
 			</section>
 
 			<section class="afisha">
-				<h2><a href="#">Афиша</a></h2>
+				<h2>Афиша</h2>
 				<ul class="afisha-list">
           <?php while ( $afisha_events->have_posts() ) : $afisha_events->the_post()?>
             <li>
@@ -81,9 +81,9 @@ echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)
                 </div>
                 <div class="afisha-about">
                   <p class="afisha-date">
-                    <?=date( 'd' , strtotime(get_post_meta($post->ID, 'event_begin-date', true))).' '.Helpers::getRusMonth(get_post_meta($post->ID, 'event_begin-date', true), 'lower')?>
-                    ·
-                    <?=date( 'H:i' , strtotime(get_post_meta($post->ID, 'event_begin-time', true))) ?>
+                      <?php Helpers::showDate(get_post_meta($post->ID, 'event_begin-date', true), get_post_meta($post->ID, 'event_end-date', true))?>
+                      ·
+                      <?=date( 'H:i' , strtotime(get_post_meta($post->ID, 'event_begin-time', true))) ?>
                   </p>
                   <h2 class="afisha-title"><?=get_the_title()?></h2>
                   <p class="afisha-description"><?=get_post_meta($post->ID, 'event_short', true)?></p>

@@ -11,7 +11,7 @@
             <?php if(get_the_terms($post->ID, 'event_type')[0]->name) : ?>
                 <span class="event__title-label">мероприятие <?= get_the_terms($post->ID, 'event_type')[0]->name?></span>
             <?php endif;?>
-            <h1 class="event__title"><?=get_the_title()?></h1>
+            <h1 class="event__title text30"><?=get_the_title()?></h1>
             <section class="event__top-containers">
                 <div class="event__left-container">
                     <div class="event__announcement">
@@ -41,34 +41,9 @@
                             </span>
                         <?php endif; ?>
                         <span class="event__date">
-                            <?php
-                                $begin = '';
-                                $end = '';
-
-                                if(get_post_meta($post->ID, 'event_begin-date', true))
-                                    $begin = new DateTime(get_post_meta($post->ID, 'event_begin-date', true));
-                                if(get_post_meta($post->ID, 'event_end-date', true))
-                                    $end = new DateTime(get_post_meta($post->ID, 'event_end-date', true));
-
-                                if($begin && $end){
-                                    if((int)$begin->format('m') === (int)$end->format('m')){
-                                        if((int)$begin->format('d') === (int)$end->format('d'))
-                                            echo $begin->format('j').' '.Helpers::getRusMonth($begin->format('d.m.Y'), 'lower');
-                                        else
-                                            echo $begin->format('j').'—'.$end->format('j').' '.Helpers::getRusMonth($begin->format('d.m.Y'), 'lower');
-                                    }
-                                    else{
-                                        echo $begin->format('j').' '.Helpers::getRusMonth($begin->format('d.m.Y'), 'lower').' — '.$end->format('j').' '.Helpers::getRusMonth($end->format('d.m.Y'), 'lower');
-                                    }
-                                }
-                                elseif($begin){
-                                    echo 'с '.$begin->format('j').' '.Helpers::getRusMonth($begin->format('d.m.Y'), 'lower');
-                                }
-                                elseif($end){
-                                    echo 'до '.$end->format('j').' '.Helpers::getRusMonth($end->format('d.m.Y'), 'lower');
-                                }
-                            ?>
+                            <?php Helpers::showDate(get_post_meta($post->ID, 'event_begin-date', true), get_post_meta($post->ID, 'event_end-date', true))?>
                         </span>
+                        <br>
                         <span class="event__place">
                             <?php
                             $count = count(get_the_terms($post->ID, 'places'));

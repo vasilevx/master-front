@@ -67,16 +67,11 @@ $first_year = $prev_year = $current_year = date('Y');
 
 		<div class="events__years-events">
 			<ul class="events__year-list">
-				<li class="current-year"><a href="#">2018</a></li>
-				<li><a href="#">2017</a></li>
-				<li><a href="#">2016</a></li>
-				<li><a href="#">2015</a></li>
-				<li><a href="#">2014</a></li>
-				<li><a href="#">2013</a></li>
-				<li><a href="#">2012</a></li>
-				<li><a href="#">2011</a></li>
-				<li><a href="#">2010</a></li>
-				<li><a href="#">2009</a></li>
+                <?php foreach ($events_grouped_by_year as $year => $event) : ?>
+				<li <?= ($params['year'] == $year) ? 'class="current-year"' : ''?>>
+                    <a href="?event_type=<?=$params['type']?>&event_year=<?= $year ?>"><?= $year ?></a>
+                </li>
+                <?php endforeach; ?>
 			</ul>
 			<ul class="events__events-all-list">
 
