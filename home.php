@@ -63,9 +63,6 @@ echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)
                     <?php while ( $news->have_posts() ) : $news->the_post()?>
 					    <li class="news-title"><a href="<?=get_the_permalink()?>"><?=get_the_title()?></a></li>
                     <?php endwhile; ?>
-<!--					<li class="news-title"><a href="#">Приглашаем на органные концерты!</a></li>-->
-<!--					<li class="news-title"><a href="#">Опубликованы фотографии с акции «Дети рисуют в храме»</a></li>-->
-<!--					<li class="news-title"><a href="#">Завершилась акция «Дети рисуют в храме»</a></li>-->
 				</ul>
 <!--				<p class="arch underline-grey"><a href="#">Архив</a></p>-->
 			</section>
@@ -98,48 +95,7 @@ echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)
               </a>
             </li>
           <?php endwhile; ?>
-          <!--<li>
-						<a class="afisha-item" href="#">
-							<div class="afisha-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/afisha-1.jpg" alt="Афиша">
-							</div>
-							<div class="afisha-about">
-								<p class="afisha-date">20 апреля · 19:00</p>
-								<h2 class="afisha-title">Виктория Преображенская «Изумрудное солнце»</h2>
-								<p class="afisha-description">Презентация коллекции весна-лето 2018</p>
-								<p class="afisha-place">Галерея «Мастер», ул. Маяковского 41</p>
-							</div>
-						</a>
-					</li>
-          <li>
-						<a class="afisha-item" href="#">
-							<div class="afisha-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/afisha-3.jpg" alt="Афиша">
-							</div>
-							<div class="afisha-about">
-								<p class="afisha-date">20 апреля · 19:00</p>
-								<h2 class="afisha-title">Виктория Преображенская «Изумрудное солнце»</h2>
-								<p class="afisha-description">Презентация коллекции весна-лето 2018Презентация коллекции весна-лето 2018Презентация коллекции весна-лето 2018</p>
-								<p class="afisha-place">Галерея «Мастер», ул. Маяковского 41</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a class="afisha-item" href="#">
-							<div class="afisha-img">
-								<img src="<?php echo get_template_directory_uri(); ?>/img/afisha-2.jpg" alt="Афиша">
-							</div>
-							<div class="afisha-about">
-								<p class="afisha-date">20 апреля · 19:00</p>
-								<h2 class="afisha-title">Виктория </h2>
-								<p class="afisha-description">Презентация коллекции весна-лето 2018</p>
-								<p class="afisha-place">Галерея «Мастер», ул. Маяковского 41</p>
-							</div>
-						</a>
-					</li>-->
-
-
-				</ul>
+                </ul>
 			</section>
 		</section>
 	</div>

@@ -7,7 +7,7 @@ get_header(); ?>
 
 
 <?php
-
+require_once('classes/Helpers.php');
 $params = [
 	'type' => $_GET['event_type'],
 	'year' => $_GET['event_year']
@@ -85,8 +85,14 @@ $first_year = $prev_year = $current_year = date('Y');
 								<div class="events__image-container">
 									<?= get_the_post_thumbnail($event->ID, 'large'); ?>
 								</div>
-								<span class="events__before-event-title">предстоящее</span>
-								<h2 class="events__event-title"><a href="<?=get_permalink($event->ID)?>"><?=$event->post_title?></a></h2>
+                                <div class="events__title-container">
+                                    <h2 class="events__event-title">
+                                        <a href="<?=get_permalink($event->ID)?>"><?=$event->post_title?></a>
+                                    </h2>
+                                    <span class="events__date">
+                                        <?php Helpers::showDate(get_post_meta($event->ID, 'event_begin-date', true), get_post_meta($event->ID, 'event_end-date', true))?>
+                                    </span>
+                                </div>
 								<p>Акция посвящена явлению Августовской Божьей Матери.</p>
 							</li>
 						<?php endforeach ?>

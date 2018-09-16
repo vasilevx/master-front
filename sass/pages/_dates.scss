@@ -1,5 +1,28 @@
 .events {
-	margin-top: 95px;
+	margin-top: $margin5;
+
+	&__title-container{
+		display: flex;
+		justify-content: space-between;
+		margin-top: $margin1;
+	}
+
+	&__date{
+		display: block;
+		font-size: $text12;
+		line-height: 1.75em;
+		color: $soc-color;
+		max-width: 25%;
+		text-align: right;
+	}
+
+	&__event-title {
+		font-weight: bold;
+		font-size: $text18;
+		line-height: 1.75em;
+		max-width: 75%;
+	}
+
 }
 
 .events__place-switches {
@@ -122,18 +145,5 @@
 
 .events__image-container{
 
-}
-
-.events__before-event-title {
-	display: block;
-	font-size: $text12;
-	line-height: 1.75em;
-	color: $soc-color;
-}
-
-.events__event-title {
-	font-weight: bold;
-	font-size: $text18;
-	line-height: 1.75em;
 }
 
