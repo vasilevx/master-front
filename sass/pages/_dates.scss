@@ -21,6 +21,11 @@
 		font-size: $text18;
 		line-height: 1.75em;
 		max-width: 75%;
+
+		a{
+			display: inline-block;
+			line-height: 1.4;
+		}
 	}
 
 }

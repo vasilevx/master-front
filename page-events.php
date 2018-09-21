@@ -93,7 +93,14 @@ $first_year = $prev_year = $current_year = date('Y');
                                         <?php Helpers::showDate(get_post_meta($event->ID, 'event_begin-date', true), get_post_meta($event->ID, 'event_end-date', true))?>
                                     </span>
                                 </div>
-								<p>Акция посвящена явлению Августовской Божьей Матери.</p>
+								<p>
+                                    <?php
+                                    if(get_post_meta($event->ID, 'event_announcement', true) != "")
+                                        echo get_post_meta($event->ID, 'event_announcement', true);
+                                    else
+                                        echo event_excerpt(['text' => get_post_meta($event->ID, 'about_event', true), 'maxchar'=>200]);
+                                    ?>
+                                </p>
 							</li>
 						<?php endforeach ?>
 						</ul>

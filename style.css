@@ -1092,6 +1092,11 @@ li a {
   max-width: 75%;
 }
 
+.events__event-title a {
+  display: inline-block;
+  line-height: 1.4;
+}
+
 .events__place-switches {
   display: -webkit-box;
   display: -webkit-flex;
