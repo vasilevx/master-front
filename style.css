@@ -1795,6 +1795,14 @@ li a {
   line-height: 1.5;
 }
 
+.event__announcement ul {
+  margin: -24px 0 24px 24px;
+}
+
+.event__announcement ul li {
+  margin-bottom: 8px;
+}
+
 .event__announcement p:last-child {
   margin-bottom: 0;
 }

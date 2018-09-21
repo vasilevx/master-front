@@ -74,7 +74,7 @@ echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)
             <li>
               <a class="afisha-item" href="<?=get_the_permalink($post->ID)?>">
                 <div class="afisha-img">
-                  <?=get_the_post_thumbnail($post->ID) ?>
+                  <?=get_the_post_thumbnail($post->ID, 'medium') ?>
                 </div>
                 <div class="afisha-about">
                   <p class="afisha-date">

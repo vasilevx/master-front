@@ -40,6 +40,14 @@
   &__announcement{
     line-height: 1.5;
 
+    ul{
+      margin: -24px 0 24px 24px;
+
+      li{
+        margin-bottom: 8px;
+      }
+    }
+
     p:last-child{
       margin-bottom: 0;
     }
