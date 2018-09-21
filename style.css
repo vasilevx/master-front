@@ -104,6 +104,10 @@ table {
   padding-bottom: 15px;
 }
 
+.page-footer .current-menu-item:before {
+  display: none;
+}
+
 .page-footer .navigation {
   margin-bottom: 50px;
   min-width: 50%;
@@ -608,10 +612,6 @@ li a {
 
 .news-afisha .afisha {
   width: 41.67777%;
-}
-
-.news-afisha .afisha > h2 {
-  margin-left: 23%;
 }
 
 .news-afisha .afisha .afisha-list {
@@ -1164,6 +1164,9 @@ li a {
   -webkit-flex-grow: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
 }
 
 .events__year-list li {
@@ -1790,6 +1793,10 @@ li a {
 
 .event__announcement {
   line-height: 1.5;
+}
+
+.event__announcement p:last-child {
+  margin-bottom: 0;
 }
 
 .event__right-container {

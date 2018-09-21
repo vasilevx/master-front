@@ -39,6 +39,10 @@
 
   &__announcement{
     line-height: 1.5;
+
+    p:last-child{
+      margin-bottom: 0;
+    }
   }
 
   &__right-container{

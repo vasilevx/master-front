@@ -57,16 +57,18 @@
 
                             ?>
                         </span>
-                        <div class="event__massmedia">
-                            <h4>СМИ о мероприятии</h4>
-                            <ul>
-                                <?php foreach (get_event_massmedia($post->ID) as $item) : ?>
-                                    <li class="underline-grey">
-                                        <a target="_blank" href="<?=$item[1]?>"><nobr><?=$item[0]?></nobr></a>
-                                    </li>
-                                <?php endforeach; ?>
-                            </ul>
-                        </div>
+                        <?php if (get_event_massmedia($post->ID)) : ?>
+                            <div class="event__massmedia">
+                                <h4>СМИ о мероприятии</h4>
+                                <ul>
+                                    <?php foreach (get_event_massmedia($post->ID) as $item) : ?>
+                                        <li class="underline-grey">
+                                            <a target="_blank" href="<?=$item[1]?>"><nobr><?=$item[0]?></nobr></a>
+                                        </li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </section>

@@ -6,6 +6,13 @@
 	padding-top: 10px;
 	font-size: $text12; //12 / 16
 	padding-bottom: 15px;
+
+	.current-menu-item{
+		&:before{
+			display: none;
+		}
+	}
+
 	.navigation {
 		li {
 			font-size: $text14; //14/12

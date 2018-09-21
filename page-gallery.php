@@ -102,7 +102,7 @@ get_header(); ?>
 	</ul>
 
 	<div class="w-620">
-		<p class="gal-before-map">Галерея «Мастер» существует с 2007 года. Каждый день любой желающий может прийти и насладиться искусством художников и скульпторов со всей России. Со дня основания в нашей галерее провели уже более <a href="#">200 мероприятий <img src="<?php echo get_template_directory_uri(); ?>/img/gal-photos.png" width="15" height="15" alt="Иконка">
+		<p class="gal-before-map">Галерея «Мастер» существует с 2007 года. Каждый день любой желающий может прийти и насладиться искусством художников и скульпторов со всей России. Со дня основания в нашей галерее провели уже более <a href="<?= get_permalink( get_page_by_path( 'events' ) ) ?>?event_type=gallery&event_year=all">200 мероприятий <img src="<?php echo get_template_directory_uri(); ?>/img/gal-photos.png" width="15" height="15" alt="Иконка">
 			</a></p>
 			<p class="gal-before-map">Чтобы провести мероприятие в нашей галерее, позвоните нам или напишите на почту. В зависимости от мероприятия, мы предложим вам подходящие условия.</p>
 			<p class="eng-red-clr"><span class="t14">+7 812</span> 640-7737<br>gallery-master@yandex.ru</p>

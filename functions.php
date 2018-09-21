@@ -93,6 +93,8 @@ function get_event_massmedia($id){
 
     $list = get_post_meta($id, 'event_mass-media', true);
 
+    if (trim($list) === "") return false;
+
     $massmedia_array = explode(';', $list);
 
     if (trim($massmedia_array[count($massmedia_array)-1]) === "")

@@ -67,13 +67,13 @@
           'items_wrap'      => '%3$s',
       ] );
       ?>
-      <li>
-        <form action="" class="search-form">
-          <i class="fal fa-search"></i>
-          <input type="text" placeholder="Поиск" class="search-form__input">
-
-        </form>
-      </li>
+<!--      <li>-->
+<!--        <form action="" class="search-form">-->
+<!--          <i class="fal fa-search"></i>-->
+<!--          <input type="text" placeholder="Поиск" class="search-form__input">-->
+<!---->
+<!--        </form>-->
+<!--      </li>-->
     </ul>
   </nav>
   <!--<nav class="header-menu wrapper">

@@ -13,11 +13,14 @@ $params = [
 	'year' => $_GET['event_year'] ? $_GET['event_year'] : date("Y")
 ];
 
+if ($params['year'] === 'all') $params['year'] = '';
+
 if($params['year'])
 	$events = new WP_Query([
 		'post_type' => 'event',
-		'orderby' => 'meta_value_num',
+		'orderby' => 'meta_value',
 		'order' => 'DESC',
+		'meta_key' => 'event_begin-date',
 		'meta_query' => [
 			[
 				'key' => 'event_begin-date',
@@ -66,13 +69,15 @@ $first_year = $prev_year = $current_year = date('Y');
 		</ul>
 
 		<div class="events__years-events">
-			<ul class="events__year-list">
-                <?php foreach ($events_grouped_by_year as $year => $event) : ?>
-				<li <?= ($params['year'] == $year) ? 'class="current-year"' : ''?>>
-                    <a href="?event_type=<?=$params['type']?>&event_year=<?= $year ?>"><?= $year ?></a>
-                </li>
-                <?php endforeach; ?>
-			</ul>
+            <div class="events__years">
+                <ul class="events__year-list">
+                    <?php foreach ($events_grouped_by_year as $year => $event) : ?>
+                    <li <?= ($params['year'] == $year) ? 'class="current-year"' : ''?>>
+                        <a href="?event_type=<?=$params['type']?>&event_year=<?= $year ?>"><?= $year ?></a>
+                    </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
 			<ul class="events__events-all-list">
 
 
