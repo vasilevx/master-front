@@ -41,14 +41,16 @@ li a {
 }
 
 
-.underline-grey a {
-	border-bottom: 1px solid $grey-light;
-	transition: .33s all;
-	&:hover,
-	&:focus {
-		transition: none;
-		border-bottom: 1px solid $eng-red;
-		outline: none;
+.underline-grey {
+	a {
+		border-bottom: 1px solid $grey-light;
+		transition: .33s all;
+		&:hover,
+		&:focus {
+			transition: none;
+			border-bottom: 1px solid $eng-red;
+			outline: none;
+		}
 	}
 }
 
@@ -71,7 +73,7 @@ li a {
 	font-size: $text14;
 }
 
-.text72 {	
+.text72 {
 	font-size: $text72; //72 / 16
 }
 

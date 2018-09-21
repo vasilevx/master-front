@@ -57,7 +57,16 @@
 
   &__place{
     display: inline-block;
+    font-style: italic;
+  }
+
+  &__massmedia{
     margin-top: 24px;
+
+    h4{
+      color: $grey-text;
+      font-weight: bold;
+    }
   }
 
   &__photos{
@@ -65,6 +74,8 @@
 
     .picture-container{
       margin: 0 -.5%;
+      display: flex;
+      flex-wrap: wrap;
     }
     .picture{
       max-width: 25%;

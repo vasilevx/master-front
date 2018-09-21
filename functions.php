@@ -87,3 +87,21 @@ function event_excerpt( $args = '' ){
 
     return ($rg->autop && $text) ? "<p>$text</p>" : $text;
 }
+
+function get_event_massmedia($id){
+    $massmedia_array = [];
+
+    $list = get_post_meta($id, 'event_mass-media', true);
+
+    $massmedia_array = explode(';', $list);
+    array_pop($massmedia_array);
+
+    foreach ($massmedia_array as &$item)
+        $item = explode(',', $item);
+
+    foreach ($massmedia_array as &$item)
+        foreach ($item as &$element)
+            $element = trim($element);
+
+    return $massmedia_array;
+}

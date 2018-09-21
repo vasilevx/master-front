@@ -9,8 +9,8 @@ get_header(); ?>
 <?php
 require_once('classes/Helpers.php');
 $params = [
-	'type' => $_GET['event_type'],
-	'year' => $_GET['event_year']
+	'type' => $_GET['event_type'] ? $_GET['event_type'] : 'fund',
+	'year' => $_GET['event_year'] ? $_GET['event_year'] : date("Y")
 ];
 
 if($params['year'])
@@ -61,8 +61,8 @@ $first_year = $prev_year = $current_year = date('Y');
 		<h1 class="letter-spacing-300">МЕРОПРИЯТИЯ</h1>
 
 		<ul class="events__place-switches">
-			<li><a href="?event_type=gallery&event_year=<?php $params['year'] ?>" <?= ($params['type'] == 'gallery') ? 'class="events__cur-place"' : ''?>>в галерее «Мастер»</a></li>
-			<li><a href="?event_type=fund&event_year=<?php $params['year'] ?>" <?= ($params['type'] == 'fund') ? 'class="events__cur-place"' : ''?>>фонда</a></li>
+			<li><a href="?event_type=gallery&event_year=<?= $params['year'] ?>" <?= ($params['type'] == 'gallery') ? 'class="events__cur-place"' : ''?>>в галерее «Мастер»</a></li>
+			<li><a href="?event_type=fund&event_year=<?= $params['year'] ?>" <?= ($params['type'] == 'fund') ? 'class="events__cur-place"' : ''?>>фонда</a></li>
 		</ul>
 
 		<div class="events__years-events">

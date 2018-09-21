@@ -57,6 +57,16 @@
 
                             ?>
                         </span>
+                        <div class="event__massmedia">
+                            <h4>СМИ о мероприятии</h4>
+                            <ul>
+                                <?php foreach (get_event_massmedia($post->ID) as $item) : ?>
+                                    <li class="underline-grey">
+                                        <a target="_blank" href="<?=$item[1]?>"><nobr><?=$item[0]?></nobr></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -64,7 +74,7 @@
         <div style="clear: both;"></div>
         <div class="event__photos">
             <div class="grid picture-container" itemscope itemtype="http://schema.org/ImageGallery">
-                <div class="grid-sizer" style="width: 25%;"></div>
+                <div class="grid-sizer" style="width: 25%; display:none;"></div>
                 <?php foreach (get_post_meta($post->ID, 'event_photos') as $i => $photo) :?>
                     <figure class="grid-item picture" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-index="<?=$i;?>">
                         <a href="<?=$photo['guid']?>" itemprop="contentUrl" data-size="<?=getimagesize($photo['guid'])[0].'x'.getimagesize($photo['guid'])[1]?>" data-index="<?=$photo['id']?>">
@@ -195,5 +205,4 @@
             columnWidth: '.grid-sizer'
         });
     })
-
 </script>
