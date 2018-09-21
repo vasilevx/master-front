@@ -80,7 +80,7 @@
                 <?php foreach (get_post_meta($post->ID, 'event_photos') as $i => $photo) :?>
                     <figure class="grid-item picture" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-index="<?=$i;?>">
                         <a href="<?=$photo['guid']?>" itemprop="contentUrl" data-size="<?=getimagesize($photo['guid'])[0].'x'.getimagesize($photo['guid'])[1]?>" data-index="<?=$photo['id']?>">
-                            <?= wp_get_attachment_image($photo['ID'], 'full', false, ['class' => 'event__photo', 'itemprop' => 'thumbnail'])?>
+                            <?= wp_get_attachment_image($photo['ID'], 'event_thumb', false, ['class' => 'event__photo', 'itemprop' => 'thumbnail'])?>
                         </a>
                     </figure>
                 <?php endforeach; ?>

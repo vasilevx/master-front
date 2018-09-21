@@ -109,3 +109,5 @@ function get_event_massmedia($id){
 
     return $massmedia_array;
 }
+
+add_image_size('event_thumb', 350 ,350, false);
