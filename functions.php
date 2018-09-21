@@ -94,7 +94,9 @@ function get_event_massmedia($id){
     $list = get_post_meta($id, 'event_mass-media', true);
 
     $massmedia_array = explode(';', $list);
-    array_pop($massmedia_array);
+
+    if (trim($massmedia_array[count($massmedia_array)-1]) === "")
+        array_pop($massmedia_array);
 
     foreach ($massmedia_array as &$item)
         $item = explode(',', $item);
