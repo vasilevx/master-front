@@ -45,4 +45,13 @@ class Helpers{
             echo 'до '.$end->format('j').' '.Helpers::getRusMonth($end->format('d.m.Y'), 'lower');
         }
     }
+
+    public static function diffInDays($date1, $date2 = null){
+        if (!$date2) $date2 = date('Y-m-d');
+
+        $begin_date = new DateTime($date1);
+        $current_date = new DateTime($date2);
+
+        return (int) $begin_date->diff($current_date)->format('%r%a');
+    }
 }

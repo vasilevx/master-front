@@ -1753,6 +1753,29 @@ li a {
   max-width: 50%;
 }
 
+.event__title-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.event__canceled, .event__rescheduled {
+  font-size: 4.5rem;
+  color: #bb2721;
+  line-height: 1;
+}
+
+.event__canceled--small, .event__rescheduled--small {
+  font-size: 1rem;
+  color: #bb2721;
+  line-height: 1;
+}
+
 .event__title-label {
   font-size: 0.875rem;
   display: block;

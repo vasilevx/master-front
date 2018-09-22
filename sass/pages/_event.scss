@@ -5,6 +5,23 @@
     max-width: 50%;
   }
 
+  &__title-container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__canceled, &__rescheduled{
+    font-size: $text72;
+    color: $eng-red;
+    line-height: 1;
+
+    &--small{
+      font-size: $text16;
+      color: $eng-red;
+      line-height: 1;
+    }
+  }
+
   &__title-label{
     font-size: $text14;
     display: block;

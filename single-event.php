@@ -11,7 +11,32 @@
             <?php if(get_the_terms($post->ID, 'event_type')[0]->name) : ?>
                 <span class="event__title-label">мероприятие <?= get_the_terms($post->ID, 'event_type')[0]->name?></span>
             <?php endif;?>
-            <h1 class="event__title text30"><?=get_the_title()?></h1>
+            <div class="event__title-container">
+                <h1 class="event__title text30"><?=get_the_title()?></h1>
+                <?php
+                ?>
+                <?php if(get_post_meta($post->ID, 'event_status', true) === 'canceled'): ?>
+                    <?php if (Helpers::diffInDays(get_post_meta($post->ID, 'event_begin-date', true)) <= 0) :?>
+                        <span class="event__canceled">
+                            Отменен
+                        </span>
+                    <?php else : ?>
+                        <span class="event__canceled--small">
+                            Был отменен
+                        </span>
+                    <?php endif; ?>
+                <?php elseif(get_post_meta($post->ID, 'event_status', true) === 'rescheduled'): ?>
+                    <?php if (Helpers::diffInDays(get_post_meta($post->ID, 'event_begin-date', true)) <= 0) :?>
+                        <span class="event__rescheduled">
+                            Перенесен
+                        </span>
+                    <?php else : ?>
+                        <span class="event__rescheduled--small">
+                            Был перенесен
+                        </span>
+                    <?php endif; ?>
+                <?php endif; ?>
+            </div>
             <section class="event__top-containers">
                 <div class="event__left-container">
                     <div class="event__announcement">
