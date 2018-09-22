@@ -87,25 +87,27 @@ $first_year = $prev_year = $current_year = date('Y');
 						<ul class="events__events-in-year grid">
 						<?php foreach($year_events as $event): ?>
 							<li class="events__single-event grid-item">
-								<div class="events__image-container">
-									<?= get_the_post_thumbnail($event->ID, 'large'); ?>
-								</div>
-                                <div class="events__title-container">
-                                    <h2 class="events__event-title">
-                                        <a href="<?=get_permalink($event->ID)?>"><?=$event->post_title?></a>
-                                    </h2>
-                                    <span class="events__date">
-                                        <?php Helpers::showDate(get_post_meta($event->ID, 'event_begin-date', true), get_post_meta($event->ID, 'event_end-date', true))?>
-                                    </span>
-                                </div>
-								<p>
-                                    <?php
-                                    if(get_post_meta($event->ID, 'event_announcement', true) != "")
-                                        echo get_post_meta($event->ID, 'event_announcement', true);
-                                    else
-                                        echo event_excerpt(['text' => get_post_meta($event->ID, 'about_event', true), 'maxchar'=>200]);
-                                    ?>
-                                </p>
+                                <a href="<?=get_permalink($event->ID)?>">
+                                    <div class="events__image-container">
+                                        <?= get_the_post_thumbnail($event->ID, 'large'); ?>
+                                    </div>
+                                    <div class="events__title-container">
+                                        <h2 class="events__event-title">
+                                            <?=$event->post_title?>
+                                        </h2>
+                                        <span class="events__date">
+                                            <?php Helpers::showDate(get_post_meta($event->ID, 'event_begin-date', true), get_post_meta($event->ID, 'event_end-date', true))?>
+                                        </span>
+                                    </div>
+                                    <p class="events__description">
+                                        <?php
+                                        if(get_post_meta($event->ID, 'event_announcement', true) != "")
+                                            echo get_post_meta($event->ID, 'event_announcement', true);
+                                        else
+                                            echo event_excerpt(['text' => get_post_meta($event->ID, 'about_event', true), 'maxchar'=>200]);
+                                        ?>
+                                    </p>
+                                </a>
 							</li>
 						<?php endforeach ?>
 						</ul>

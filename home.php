@@ -68,7 +68,9 @@ echo $months[date( 'n' , strtotime(get_post_meta($post->ID, 'event_begin', true)
 			</section>
 
 			<section class="afisha">
-				<h2>Афиша</h2>
+				<h2>
+                    <a href="<?=get_permalink( get_page_by_path( 'events' ) ) ?>?event_type=gallery&event_year=all">Афиша</a>
+                </h2>
 				<ul class="afisha-list">
           <?php while ( $afisha_events->have_posts() ) : $afisha_events->the_post()?>
             <li>

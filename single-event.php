@@ -8,11 +8,13 @@
 <div class="page-content">
     <div class="event wrapper">
         <?php if(have_posts()): the_post()?>
-            <?php if(get_the_terms($post->ID, 'event_type')[0]->name) : ?>
+            <?php if(get_the_terms($post->ID, 'event_type')[0]) : ?>
                 <span class="event__title-label">мероприятие <?= get_the_terms($post->ID, 'event_type')[0]->name?></span>
             <?php endif;?>
             <div class="event__title-container">
-                <h1 class="event__title text30"><?=get_the_title()?></h1>
+                <h1 class="event__title text30">
+                    <?=get_the_title()?>
+                </h1>
                 <?php
                 ?>
                 <?php if(get_post_meta($post->ID, 'event_status', true) === 'canceled'): ?>
@@ -82,6 +84,14 @@
 
                             ?>
                         </span>
+                        <?php if(get_the_terms($post->ID, 'event_cycle')[0]) : ?>
+                            <br><br>
+                            <span class="underline-grey">
+                                <a href="<?=get_term_link(get_the_terms($post->ID, 'event_cycle')[0])?>">
+                                    <?=get_term_meta(get_the_terms($post->ID, 'event_cycle')[0]->term_id, 'event_cycle_label')[0]?> <?= get_the_terms($post->ID, 'event_cycle')[0]->name?>
+                                </a>
+                            </span>
+                        <?php endif;?>
                         <?php if (get_event_massmedia($post->ID)) : ?>
                             <div class="event__massmedia">
                                 <h4>СМИ о мероприятии</h4>

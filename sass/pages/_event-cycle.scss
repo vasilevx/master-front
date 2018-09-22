@@ -1,0 +1,35 @@
+.event-cycle{
+
+  &__description{
+    margin-top: $margin2;
+    width: 50%;
+  }
+
+  &__events{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: $margin4;
+  }
+
+  &__event{
+    width: 1/3 * 100%;
+    padding: .5%;
+    box-sizing: border-box;
+
+    img{
+      width: 100%;
+      height: auto;
+      box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.15);
+      border-radius: 2px;
+    }
+  }
+
+  &__event-info{
+    margin-top: $margin1;
+  }
+
+  &__event-title{
+    font-size: $text18;
+    font-weight: bold;
+  }
+}

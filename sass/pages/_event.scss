@@ -24,7 +24,7 @@
 
   &__title-label{
     font-size: $text14;
-    display: block;
+    display: inline-block;
     line-height: 1;
     color: $soc-color;
   }
@@ -51,7 +51,6 @@
   &__data{
     position: sticky;
     top: 16px;
-    color: $eng-red;
   }
 
   &__announcement{
@@ -82,11 +81,13 @@
 
   &__date{
     display: inline-block;
+    color: $eng-red;
   }
 
   &__place{
     display: inline-block;
     font-style: italic;
+    color: $eng-red;
   }
 
   &__massmedia{
