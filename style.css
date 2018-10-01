@@ -188,10 +188,11 @@ table {
 }
 
 .header-title {
-  text-align: right;
+  text-align: center;
   display: block;
-  font-size: 0.75rem;
+  font-size: 1rem;
   width: 100%;
+  letter-spacing: 0.1rem;
   color: #989898;
 }
 

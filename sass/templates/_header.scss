@@ -6,10 +6,11 @@
 }
 
 .header-title {
-	text-align: right;
+	text-align: center;
 	display: block;
-	font-size: $text12;
+	font-size: $text16;
 	width: 100%;
+	letter-spacing: 0.1rem;
 	color: $soc-color;
 
 	@media(max-width: 750px) {
