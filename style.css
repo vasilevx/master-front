@@ -302,7 +302,6 @@ table {
 
 @media (max-width: 690px) {
   .header-menu {
-    padding-top: 5px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -470,7 +469,7 @@ li a {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 120px;
+  width: 72px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
