@@ -41,13 +41,19 @@
             </div>
             <section class="event__top-containers">
                 <div class="event__left-container">
+
+                    <div class="event__thumbnail">
+                        <a href="<?=get_the_post_thumbnail_url()?>">
+                            <?=get_the_post_thumbnail(null, 'large')?>
+                        </a>
+                    </div>
                     <div class="event__announcement">
                         <?=get_post_meta($post->ID, 'about_event', true)?>
                     </div>
                 </div>
                 <div class="event__right-container">
                     <div class="event__data">
-                        <?php if (get_post_meta($post->ID, 'event_begin-time', true) && get_post_meta($post->ID, 'event_end-time', true)) : ?>
+                        <?php if (get_post_meta($post->ID, 'event_begin-time', true) || get_post_meta($post->ID, 'event_end-time', true)) : ?>
                             <span class="event__time">
                                 <?php
                                 if(get_post_meta($post->ID, 'event_begin-time', true))
@@ -59,7 +65,7 @@
                                     echo $begin->format('H:i').'—'.$end->format('H:i');
                                 }
                                 elseif($begin){
-                                    echo 'с '.$begin->format('H:i');
+                                    echo $begin->format('H:i');
                                 }
                                 elseif($end){
                                     echo 'до '.$end->format('H:i');
@@ -114,7 +120,7 @@
                 <div class="grid-sizer" style="width: 25%; display:none;"></div>
                 <?php foreach (get_post_meta($post->ID, 'event_photos') as $i => $photo) :?>
                     <figure class="grid-item picture" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-index="<?=$i;?>">
-                        <a href="<?=$photo['guid']?>" itemprop="contentUrl" data-size="<?=getimagesize($photo['guid'])[0].'x'.getimagesize($photo['guid'])[1]?>" data-index="<?=$photo['id']?>">
+                        <a href="<?=$photo['guid']?>" itemprop="contentUrl" data-size="<?=getimagesize($photo['guid'])[0].'x'.getimagesize($photo['guid'])[1]?>" data-index="<?=$photo['ID']?>">
                             <?= wp_get_attachment_image($photo['ID'], 'event_thumb', false, ['class' => 'event__photo', 'itemprop' => 'thumbnail'])?>
                         </a>
                     </figure>
@@ -241,5 +247,7 @@
             percentPosition: true,
             columnWidth: '.grid-sizer'
         });
+
+        $('.event__thumbnail img');
     })
 </script>

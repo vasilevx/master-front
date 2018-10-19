@@ -40,6 +40,15 @@ else
 		'event_type' => $params['type']
 	]);
 
+
+$all_events = new WP_Query([
+    'post_type' => 'event',
+    'orderby' => 'meta_value',
+    'meta_key' => 'event_begin-date',
+    'order' => 'DESC',
+    'event_type' => $params['type']
+]);
+
 //$year = $current_year = date('Y');
 
 $events_grouped_by_year = [];
@@ -47,6 +56,13 @@ foreach($events->posts as $event){
 	$year = get_post_meta($event->ID, 'event_begin-date', true);
 	$year = new DateTime($year);
 	$events_grouped_by_year["".$year->format('Y').""][] = $event;
+}
+
+$years = [];
+foreach($all_events->posts as $event){
+    $year = get_post_meta($event->ID, 'event_begin-date', true);
+    $year = new DateTime($year);
+    $years["".$year->format('Y').""][] = $year->format('Y');
 }
 
 
@@ -71,7 +87,7 @@ $first_year = $prev_year = $current_year = date('Y');
 		<div class="events__years-events">
             <div class="events__years">
                 <ul class="events__year-list">
-                    <?php foreach ($events_grouped_by_year as $year => $event) : ?>
+                    <?php foreach ($years as $year => $event) : ?>
                     <li <?= ($params['year'] == $year) ? 'class="current-year"' : ''?>>
                         <a href="?event_type=<?=$params['type']?>&event_year=<?= $year ?>"><?= $year ?></a>
                     </li>

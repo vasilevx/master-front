@@ -1809,6 +1809,15 @@ li a {
   top: 16px;
 }
 
+.event__thumbnail {
+  margin-bottom: 24px;
+}
+
+.event__thumbnail img {
+  max-width: 100%;
+  height: auto;
+}
+
 .event__announcement {
   line-height: 1.5;
 }
@@ -1833,6 +1842,7 @@ li a {
 .event__time {
   display: inline-block;
   margin-right: 15px;
+  color: #bb2721;
 }
 
 .event__date {
