@@ -34,8 +34,8 @@
 
   <!-- Шапка -->
   <header class="page-header wrapper">
-    <!--<p class="header-title">Некоммерческая организация международный фонд поддержки культуры &laquo;Мастер Класс&raquo; · 191123, Россия, Санкт-Петербург, ул. Рылеева, д.6</p>
-     <div class="grey-line"></div> -->
+    <p class="header-title">Некоммерческая организация международный фонд поддержки культуры &laquo;Мастер Класс&raquo;</p>
+     <div class="grey-line"></div>
     <div class="header-block">
       <?php if(is_home()): ?>
         <div class="logo"></div>
@@ -50,8 +50,8 @@
           <li><a href="https://vk.com/club35656414"><i class="fab fa-vk" aria-hidden="true"></i></a></li>
           <li><a href="https://instagram.com/gallerymaster/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
           <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+          <!-- <li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li> -->
+          <!-- <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li> -->
         </ul>
 
       </div>
