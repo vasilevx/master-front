@@ -8,10 +8,10 @@
 .header-title {
 	text-align: center;
 	display: block;
-	font-size: $text16;
+	font-size: $text14;
 	width: 100%;
-	letter-spacing: 0.1rem;
 	color: $soc-color;
+    line-height: 2.5;
 
 	@media(max-width: 750px) {
 		font-size: $text14;

@@ -190,10 +190,10 @@ table {
 .header-title {
   text-align: center;
   display: block;
-  font-size: 1rem;
+  font-size: 0.875rem;
   width: 100%;
-  letter-spacing: 0.1rem;
   color: #989898;
+  line-height: 2.5;
 }
 
 @media (max-width: 750px) {
