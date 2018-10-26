@@ -21,6 +21,7 @@ if($params['year'])
 		'orderby' => 'meta_value',
 		'order' => 'DESC',
 		'meta_key' => 'event_begin-date',
+		'nopaging' => true,
 		'meta_query' => [
 			[
 				'key' => 'event_begin-date',
@@ -37,6 +38,7 @@ else
 		'orderby' => 'meta_value',
 		'meta_key' => 'event_begin-date',
 		'order' => 'DESC',
+		'nopaging' => true,
 		'event_type' => $params['type']
 	]);
 
@@ -45,7 +47,8 @@ $all_events = new WP_Query([
     'post_type' => 'event',
     'orderby' => 'meta_value',
     'meta_key' => 'event_begin-date',
-    'order' => 'DESC',
+	'order' => 'DESC',
+	'nopaging' => true,
     'event_type' => $params['type']
 ]);
 
