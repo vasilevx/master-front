@@ -39,10 +39,10 @@ class Helpers{
             }
         }
         elseif($begin){
-            echo 'с '.$begin->format('j').' '.Helpers::getRusMonth($begin->format('d.m.Y'), 'lower');
+            echo $begin->format('j').' '.Helpers::getRusMonth($begin->format('d.m.Y'), 'lower');
         }
         elseif($end){
-            echo 'до '.$end->format('j').' '.Helpers::getRusMonth($end->format('d.m.Y'), 'lower');
+            echo $end->format('j').' '.Helpers::getRusMonth($end->format('d.m.Y'), 'lower');
         }
     }
 
