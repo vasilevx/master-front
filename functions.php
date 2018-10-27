@@ -14,6 +14,14 @@ function enqueue_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 
+function admin_enqueue_scripts() {
+    if(get_current_screen()->post_type == 'event' && get_current_screen()->base == 'post'){
+      wp_enqueue_script( 'event-helper', get_template_directory_uri() . '/js/event-helper.js' );
+    }
+}
+  
+add_action( 'admin_enqueue_scripts', 'admin_enqueue_scripts' );
+
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
 
@@ -111,3 +119,13 @@ function get_event_massmedia($id){
 }
 
 add_image_size('event_thumb', 350 ,350, false);
+
+add_action('save_post_event', 'set_end_date');
+function set_end_date($post_id)
+{
+    if(!get_post_meta($post_id, 'event_end-date', true)){
+        remove_action('save_post_event', 'set_end_date');
+        update_post_meta($post_id, 'event_end-date', get_post_meta($post_id, 'event_begin-date', true));
+        add_action('save_post_event', 'set_end_date');
+    }
+}
